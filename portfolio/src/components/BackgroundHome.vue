@@ -1,10 +1,8 @@
 <template>
-  <div class="bgHome">
-      <div class="images">
-        <img class="lines" src="../assets/img/lines.png" alt="illustration2">
-        <img class="me" src="../assets/img/moi.png" alt="illustration de Flora Mallet">
-        <img class="lines2" src="../assets/img/lines2.png" alt="illustration3">
-      </div>
+  <div class="images">
+    <img class="lines" src="../assets/img/lines.png" alt="illustration2">
+    <img class="me" src="../assets/img/moiResized2.png" alt="illustration de Flora Mallet">
+    <img class="linesB" src="../assets/img/lines2Res.png" alt="illustration3">
   </div>
 </template>
 
@@ -16,20 +14,21 @@ export default {
 
 <style scoped>
 .images {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0;
+  width: 100%;
 }
-.moi {
-    width: 20%;
-    height:auto;
+.me {
+  margin-right: 42%;
 }
 .lines {
-    width: 10%;
-    height: auto;
+  max-height: 100vh;
+  width: auto;
 }
-.lines2 {
-    width: 20%;
-    height: 20%;
+.linesB {
+  margin-bottom: 2%;
+  margin-right: 2%;
 }
 </style>
