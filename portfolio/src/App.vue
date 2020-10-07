@@ -21,12 +21,24 @@ export default {
 *{
   box-sizing: border-box;
 }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,300&display=swap');
+@font-face {
+	font-family: 'BodoniB';
+	src: url('./assets/fonts/BOD_B.TTF');
+}
+@font-face {
+	font-family: 'BodoniCB';
+	src: url('./assets/fonts/BOD_CB.TTF');
+}
+@font-face {
+	font-family: 'BodoniI';
+	src: url('./assets/fonts/BOD_I.TTF');
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Roboto", Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-weight: 300;
 }
 </style>
