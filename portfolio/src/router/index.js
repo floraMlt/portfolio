@@ -21,6 +21,11 @@ const routes = [
     path: '/projectCategories',
     name: 'ProjectCategories',
     component: ProjectCategories
+  },
+  {
+    path: '/project/:category',
+    name: 'Projects',
+    component: Projects
   }
 ]
 

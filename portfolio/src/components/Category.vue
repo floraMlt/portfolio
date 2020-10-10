@@ -1,6 +1,6 @@
 <template>
   <div class="category">
-    <img class="imgCat" :id="this.idImg" :src="this.srcImg" :alt="this.catName" v-on:click="go">
+    <img class="imgCat" :id="this.idImg" :src="this.srcImg" :alt="this.catName" :style="this.styleImg" v-on:click="go">
   </div>
 </template>
 
@@ -10,13 +10,15 @@ export default {
   props: {
       cat:{type:String, required:true},
       src:{type:String, required:true},
-      id:{type:String, required:true}
+      id:{type:String, required:true},
+      style:{type:String, required:true}
   },
   data() {
     return {
       catName : this.cat,
       srcImg : this.src,
-      idImg : this.id
+      idImg : this.id,
+      styleImg : this.style
     }
   },
   methods: {
@@ -28,5 +30,7 @@ export default {
 </script>
 
 <style scoped>
-
+.imgCat {
+  height: 16vh;
+}
 </style>
