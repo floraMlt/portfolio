@@ -18,17 +18,17 @@ export default {
 
 <style scoped>
 .decoButton {
-  border: #C1272D 0.3px solid;
+  border: #C1272D 0.5px solid;
   background-color: white;
   color: #1B1464;
   border-radius: 50px;
   font-family: "BodoniI";
+  font-size: 1.3em;
+  padding: 2% 5%;
 }
 .button {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-left: 5%;
 }
 
 </style>

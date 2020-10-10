@@ -20,8 +20,8 @@ export default {
 	src: url('./assets/fonts/BOD_B.TTF');
 }
 @font-face {
-	font-family: 'BodoniCB';
-	src: url('./assets/fonts/BOD_CB.TTF');
+	font-family: 'BodoniR';
+	src: url('./assets/fonts/BOD_R.TTF');
 }
 @font-face {
 	font-family: 'BodoniI';
