@@ -1,19 +1,19 @@
 <template>
   <div class="home">
-      <div class="blocTxt">
-        <div class="title">
+      <div id="blocTxt">
+        <div id="title">
           <h1>Flora Mallet</h1>
           <img class="point" src="../assets/img/point.png" alt="point bleu">
         </div>
-        <div class="txtButton">
-            <p class="txt">
+        <div id="txtButton">
+            <p id="txt">
                 Etudiante à l'école d'ingénieurs IMAC (Image Multimédia Audiovisuel Communication). Communication visuelle, Programmation, Web design, Web
                 développement, Design graphique print et numérique, Installations interactives, Jeux-vidéos. <br> <br>Prêt.e.s à découvrir mon univers ?
             </p>
-            <Button class="buttonGo"/>
+            <Button id="buttonGo"/>
         </div>
       </div>
-      <BackgroundHome class="background"/>
+      <BackgroundHome id="background"/>
   </div>
 </template>
 
@@ -40,7 +40,7 @@ h1 {
     display: flex;
     justify-content: flex-end;
 }
-.blocTxt {
+#blocTxt {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -49,20 +49,20 @@ h1 {
   right: -8%;
   top: 20%;
 }
-.txtButton {
+#txtButton {
     width: 50%;
     margin: 0;
     margin-left: 5%;
 }
-.txt {
+#txt {
   text-align: justify;
 }
-.buttonGo {
+#buttonGo {
   width: 50%;
   margin-left: 25%;
   margin-top: 5%;
 }
-.title {
+#title {
   display: flex;
   flex-direction: row;
   align-items: center;

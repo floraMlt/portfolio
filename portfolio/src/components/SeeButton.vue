@@ -1,6 +1,6 @@
 <template>
   <div class="button">
-    <button v-on:click="go" id="decoButton">C'est parti !</button>
+    <button v-on:click="see" id="decoButton">Découvrir</button>
   </div>
 </template>
 
@@ -8,9 +8,19 @@
 
 export default {
   name: 'Button',
+  props: {
+    titleProject:{type:String, required:true},
+    catProject:{type:String, required:true}
+  },
+  data() {
+    return {
+      title: this.titleProject,
+      cat: this.catProject
+    }
+  },
   methods:{
-    go() {
-        this.$router.push({name:'ProjectCategories'})
+    see() {
+      this.$router.push({name:'projects/' + this.title})
     }
   }
 }
@@ -25,6 +35,7 @@ export default {
   font-family: "BodoniI";
   font-size: 1.3em;
   padding: 2% 5%;
+  width: 70%;
 }
 .button {
   display: flex;

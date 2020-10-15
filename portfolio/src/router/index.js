@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import ProjectCategories from '../views/ProjectCategories.vue'
+import Projects from '../views/Projects.vue'
+import ProjectDetails from '../views/ProjectDetails.vue'
 
 Vue.use(VueRouter)
 
@@ -18,14 +20,20 @@ const routes = [
     component: About
   },
   {
-    path: '/projectCategories',
+    path: '/projects',
     name: 'ProjectCategories',
     component: ProjectCategories
   },
   {
-    path: '/project/:category',
+    path: '/projects/:catName',
     name: 'Projects',
     component: Projects
+  }
+  ,
+  {
+    path: '/projects/:title',
+    name: 'ProjectDetails',
+    component: ProjectDetails
   }
 ]
 

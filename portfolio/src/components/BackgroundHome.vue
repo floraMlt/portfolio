@@ -1,8 +1,8 @@
 <template>
   <div class="images">
-    <img class="lines" src="../assets/img/lines.png" alt="illustration2">
-    <img class="me" src="../assets/img/moiR.png" alt="illustration de Flora Mallet">
-    <img class="linesB" src="../assets/img/lines2Res.png" alt="illustration3">
+    <img id="lines" src="../assets/img/lines.png" alt="illustration2">
+    <img id="me" src="../assets/img/moiR.png" alt="illustration de Flora Mallet">
+    <img id="linesB" src="../assets/img/lines2Res.png" alt="illustration3">
   </div>
 </template>
 
@@ -20,14 +20,14 @@ export default {
   margin: 0;
   width: 100%;
 }
-.me {
+#me {
   margin-right: 30%;
 }
-.lines {
+#lines {
   max-height: 100vh;
   width: auto;
 }
-.linesB {
+#linesB {
   margin-bottom: 2%;
   margin-right: 2%;
 }
