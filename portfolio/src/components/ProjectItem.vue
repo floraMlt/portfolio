@@ -4,7 +4,7 @@
       <div id="txt">
         <h3 id="titleProject"> {{this.projectData.title}} </h3>
         <p id="resumeProject"> {{this.projectData.resume}} </p>
-        <SeeButton id="see" :titleProject="this.projectData.title"/>
+        <SeeButton id="see" :callback="this.see"/>
       </div>
   </div>
 </template>
@@ -19,20 +19,19 @@ export default {
   },
   props:{
     projet:{type:Object, required:true}
-    /*title:{type:String, required:true},
-    img:{type:String, required:true},
-    resume:{type:String, required:true},
-    categories:{type:String, required:true}*/
   },
   data() {
       return {
-          /*titleProject: this.title,
-          imgProject: this.img,
-          resumeProject: this.resume,
-          catProject: this.categories*/
           projectData: this.projet
       }
+  },
+  methods:{
+    see() {
+      this.$currentViewProject = this.projectData
+      this.$router.push('/projects/' + this.$parent.currentCategory +"/"+ this.projectData.routerTitle).catch(()=>{})
+    }
   }
+  // this.$currentViewProject = projet
 }
 </script>
 

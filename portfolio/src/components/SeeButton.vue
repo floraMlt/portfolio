@@ -1,6 +1,6 @@
 <template>
   <div class="button">
-    <button v-on:click="see" id="decoButton">Découvrir</button>
+    <button v-on:click="callback" id="decoButton">Découvrir</button>
   </div>
 </template>
 
@@ -9,19 +9,7 @@
 export default {
   name: 'Button',
   props: {
-    titleProject:{type:String, required:true},
-    catProject:{type:String, required:true}
-  },
-  data() {
-    return {
-      title: this.titleProject,
-      cat: this.catProject
-    }
-  },
-  methods:{
-    see() {
-      this.$router.push({name:'projects/' + this.title})
-    }
+    callback: {type:Function, required:true}
   }
 }
 </script>

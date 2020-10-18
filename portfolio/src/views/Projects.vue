@@ -3,7 +3,7 @@
     <p id="titleProjects"> {{this.currentCategory}} </p>
       <div id="contentProjects">
           <div id="navigation">
-            <!--<CategoryBar :currentCat="this.currentCategory"/>-->
+            <!--<CategoryBar/>-->
             <div class="pages" @click="changeCategory('All')">All</div>
             <div class="pages" @click="changeCategory('Web')">Web</div>
             <div class="pages" @click="changeCategory('Graphisme')">Graphisme</div>
@@ -17,7 +17,7 @@
         <!-- on peut éviter de mettre le v-for sur un div et le mettre direct sur projectItem, voir si ça casse pas mon css-->
         <!--<ProjectItem :title="project.title" :img="project.img" :resume="project.resume" :categories="project.categories"/>-->
         <div class="scroll">
-          <ProjectItem class="listProjects"  v-for="project in selectProject" :key="project.title" :projet="project"/>
+          <ProjectItem class="listProjects" v-for="project in selectProject" :key="project.title" :projet="project"/>
         </div>
       </div>
   </div>
@@ -85,26 +85,17 @@ export default {
 #titleProjects {
   color: #C1272D;
   position: absolute;
-    /*position: fixed;*/
-  top: -4%;
+  top: 3vh;
+  margin:0px;
   font-family: "bodoniR";
   font-size: 2.8em;
   z-index: 6;
-  /*
-  background-color: white;
-    width: 60%;
-    text-align: center;
-    z-index: 5;
-  */
 }
 #contentProjects {
-  /*position: absolute;*/
-  width: 70%;
+  width: 65%;
   height: fit-content;
-  /*overflow: auto;*/
   display: flex;
   flex-flow: row wrap;
-  /*justify-content: space-around;*/
   justify-content: center;
   border-radius: 20px;
   margin-top: 8%;
@@ -118,6 +109,8 @@ export default {
 }
 .scroll {
   overflow: auto !important;
+  height: calc(100vh - 180px);
+  
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -130,10 +123,6 @@ export default {
   display: flex;
   justify-content: center;
   align-content: flex-start;
-  /*border:#1B1464 0.5px solid;
-  border-radius: 20px;*/
-  /*top: 13%;*/
-  /*height: 100%;*/
   width: 71%;
   z-index: 7;
 }
@@ -147,12 +136,5 @@ export default {
   border-radius: 5px;
   text-align: center;
 }
-/*#rect {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  text-align: center;
-  min-height: 100%;
-}*/
 </style>
 

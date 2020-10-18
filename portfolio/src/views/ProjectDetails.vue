@@ -2,25 +2,32 @@
   <div class="projectDetails">
     <router-link :to="{name: 'Projects'}">Retour aux projets</router-link>
     <p>Détails d'un projet</p>
+    <h1> {{this.currentProjectData.title}} </h1>
+    <p>{{this.currentProjectData.txt}}</p>
   </div>
 </template>
 
 <script>
+import projets from '@/datas/projects'
+import projetsIndex from '@/datas/projectsIndex'
 
 export default {
   name: 'ProjectDetails',
-  props: {
-    titleProject:{type:String, required:true},
-    catProject:{type:String, required:true},
-    txtProject:{type:String, required:true},
-    imgProject:{type:String, required:true}
+  created() {
+    this.getCurrentProject()
+    console.log(this.titleCurrentProject)
+    console.log(this.currentProjectData)
+  },
+  methods : {
+    getCurrentProject() {
+      this.titleCurrentProject = this.$route.params.titleP
+      this.currentProjectData = projets[projetsIndex[this.titleCurrentProject]]
+    }
   },
   data() {
     return {
-      title: this.titleProject,
-      cat: this.catProject,
-      txt: this.txtProject,
-      img: this.imgProject
+      titleCurrentProject: null,
+      currentProjectData: null
     }
   }
 }

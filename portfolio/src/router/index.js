@@ -28,10 +28,9 @@ const routes = [
     path: '/projects/:catName',
     name: 'Projects',
     component: Projects
-  }
-  ,
+  },
   {
-    path: '/projects/:title',
+    path: '/projects/:catName/:titleP',
     name: 'ProjectDetails',
     component: ProjectDetails
   }

@@ -15,13 +15,15 @@
 <script>
 export default {
   name: 'CategoryBar',
-  props: {
-    currentCategory:{type:String, required:true}
-  },
   data() {
     return {
       /*currentCat: "All",*/
-      currentCat: this.currentCategory
+      currentCat: this.$parent.currentCategory
+    }
+  },
+  computed: { // relance fonction que quand il y a une action de l'utilisateur
+    selectProject : function() {
+      return this.$parent.projects.filter(this.$parent.verifCategory)
     }
   },
   methods: {
@@ -35,10 +37,13 @@ export default {
 
 <style scoped>
 .pages {
-  text-decoration: none;
   font-size: 0.9em;
-  margin: 4% 1% 2% 1%;
-  color: black;
+  margin: -2% 0% 2% 1%;
+  padding: 0.8% 1%;
+  color: white;
   height: fit-content;
+  background-color:  #C1272D;
+  border-radius: 5px;
+  text-align: center;
 }
 </style>

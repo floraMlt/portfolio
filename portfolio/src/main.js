@@ -4,6 +4,7 @@ import SuiVue from 'semantic-ui-vue'
 import router from './router/index'
 
 Vue.config.productionTip = false
+Vue.prototype.$currentViewProject = null
 
 Vue.use(SuiVue);
 

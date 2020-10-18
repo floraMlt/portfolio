@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     go(){
-      this.$router.push('projects/' + this.catName);
+      this.$router.push('/projects/' + this.catName);
     }
   }
 }
