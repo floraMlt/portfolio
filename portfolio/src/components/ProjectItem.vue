@@ -44,7 +44,7 @@ export default {
   border-radius: 5%;
   background-color: white;
   margin: 1%;
-  padding: 1.5%;
+  padding: 0.7%;
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start;

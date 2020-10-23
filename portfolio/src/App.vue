@@ -32,6 +32,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 300;
+  font-size: 1.1em;
 }
 body {
   margin: 0;
