@@ -11,12 +11,13 @@
           <p>{{this.currentProjectData.text}}</p>
           <p>{{this.currentProjectData.date}}</p>
         </div>
+      <Modal ref="modal" :imgSrc="this.currentImgSrc"/>
       <img id="mainImg" :alt="this.currentProjectData.title" :src="this.currentProjectData.img">
       <div v-if="this.otherImgTab[0]" class="mosaicImg">
-        <i class="angle left icon fleche" v-on:click="hideLeft" v-if="this.first > 0"></i>
+        <i id="left" class="angle left icon fleche" v-on:click="hideLeft" v-if="this.first > 0"></i>
         <img v-for="(imgOther, index) in this.otherImgTab" :key="imgOther.id" alt="Images du projet" :src="imgOther" 
-          :class="{'hidden': (index < first || index > last), 'images' : true}">
-        <i class="angle right icon fleche" v-on:click="hideRight" v-if="this.last < (this.otherImgTab.length -1)"></i>
+          :class="{'hidden': (index < first || index > last), 'images' : true}" @click="toggleModal(imgOther)">
+        <i id="right" class="angle right icon fleche" v-on:click="hideRight" v-if="this.last < (this.otherImgTab.length -1)"></i>
       </div>
     </div>
   </div>
@@ -25,6 +26,7 @@
 <script>
 import projets from '@/datas/projects'
 import projetsIndex from '@/datas/projectsIndex'
+import Modal from '@/components/Modal.vue'
 /*import simplebar from 'simplebar-vue';
 import 'simplebar/dist/simplebar.min.css';*/
 
@@ -46,6 +48,10 @@ export default {
     hideRight() {
       this.first++
       this.last++
+    },
+    toggleModal(srcImg) {
+      this.currentImgSrc = srcImg
+      this.$refs.modal.toggle()
     }
   },
   data() {
@@ -54,12 +60,14 @@ export default {
       currentProjectData: null,
       otherImgTab: null,
       first: 0,
-      last: 2
+      last: 2,
+      currentImgSrc: null
     }
-  }/*,
+  },
   components: {
-    simplebar
-  }*/
+    Modal
+    /*simplebar*/
+  }
 }
 </script>
 
@@ -75,11 +83,9 @@ h1{
   display: none;
 }
 .fleche {
-  position: relative;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  margin-top: 7%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 1.7em;
   color: #280047;
 }
@@ -93,17 +99,24 @@ h1{
   -ms-user-select: none; 
   user-select: none;
 }
-.mosaicImg{
+.mosaicImg {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   margin-top: 2%;
+  position: relative;
 }
 .images{
   width: 22%;
   margin: 0% 1%;
   border: 1px solid rgba(177, 177, 177, 0.692);
   border-radius: 10px;
+}
+#left {
+  left: 12%;
+}
+#right {
+  right: 12%;
 }
 #txt {
   text-align: right;
@@ -119,6 +132,7 @@ h1{
   width: 38%;
   border-radius: 8px;
   margin-left: 1.5%;
+  margin-right: 1%;
 }
 #retour {
   position: absolute;
@@ -127,7 +141,7 @@ h1{
   display: flex;
   justify-self: flex-start;
   text-decoration: none;
-  color: #C1272D;
+  color: #280047;
   font-family: "Roboto";
   font-weight: lighter;
   /*font-size: 0.7em;*/
