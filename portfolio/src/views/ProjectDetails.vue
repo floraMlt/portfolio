@@ -5,12 +5,14 @@
       </i>Retour aux projets
     </router-link>
     <!--<simplebar data-simplebar-auto-hide="false"/>-->
-      <div id="content">
-        <div id="txt">
-          <h1> {{this.currentProjectData.title}} </h1>
-          <p>{{this.currentProjectData.text}}</p>
-          <p>{{this.currentProjectData.date}}</p>
-        </div>
+    <img id="deco1" alt="deco" src="@/assets/img/lines5.png">
+    <img id="deco2" alt="deco" src="@/assets/img/lines.png">
+    <div id="content">
+      <div id="txt">
+        <h1> {{this.currentProjectData.title}} </h1>
+        <p>{{this.currentProjectData.text}}</p>
+        <p>{{this.currentProjectData.date}}</p>
+      </div>
       <Modal ref="modal" :imgSrc="this.currentImgSrc"/>
       <img id="mainImg" :alt="this.currentProjectData.title" :src="this.currentProjectData.img">
       <div v-if="this.otherImgTab[0]" class="mosaicImg">
@@ -34,12 +36,12 @@ export default {
   name: 'ProjectDetails',
   created() {
     this.getCurrentProject()
+    this.verifProject()
   },
   methods : {
     getCurrentProject() {
       this.titleCurrentProject = this.$route.params.titleP
-      this.currentProjectData = projets[projetsIndex[this.titleCurrentProject]]
-      this.otherImgTab = this.currentProjectData.otherImg
+      
     },
     hideLeft() {
       this.first--
@@ -52,6 +54,41 @@ export default {
     toggleModal(srcImg) {
       this.currentImgSrc = srcImg
       this.$refs.modal.toggle()
+    },
+    verifProject(){
+      console.log(this.titleCurrentProject)
+      if(this.titleCurrentProject != 'CapSciences' 
+        && this.titleCurrentProject != 'Causette'
+        && this.titleCurrentProject != 'Boulangerie'
+        && this.titleCurrentProject != 'Cadences'
+        && this.titleCurrentProject != 'NeonDemon'
+        && this.titleCurrentProject != 'Spottimac'
+        && this.titleCurrentProject != 'ExpressionsNous'
+        && this.titleCurrentProject != 'DashboardArbres'
+        && this.titleCurrentProject != 'RecettesAGogo'
+        && this.titleCurrentProject != 'LaFolleHistoireDuChocolat'
+        && this.titleCurrentProject != 'Pieuvre'
+        && this.titleCurrentProject != 'AOneWayTicketToNishiwaga'
+        && this.titleCurrentProject != 'ContreTemps'
+        && this.titleCurrentProject != 'PoemesSonores'
+        && this.titleCurrentProject != 'Photographie'
+        && this.titleCurrentProject != 'Dessin'
+        && this.titleCurrentProject != 'LacherPrise'
+        && this.titleCurrentProject != 'ElViaje'
+        && this.titleCurrentProject != 'UnePromenadeEnPleineNature'
+        && this.titleCurrentProject != 'MaquetteChampsSurMarne'
+        && this.titleCurrentProject != 'ACTogether'
+        && this.titleCurrentProject != 'AtlantisWay'
+        && this.titleCurrentProject != 'Wireframe'
+        && this.titleCurrentProject != 'AnARTmorphose'
+        && this.titleCurrentProject != 'TowerDefense'
+        && this.titleCurrentProject != 'WorldImaker'
+      ) {
+        this.$router.push({name:'Home'})
+      } else {
+        this.currentProjectData = projets[projetsIndex[this.titleCurrentProject]]
+        this.otherImgTab = this.currentProjectData.otherImg
+      }
     }
   },
   data() {
@@ -111,6 +148,20 @@ h1{
   margin: 0% 1%;
   border: 1px solid rgba(177, 177, 177, 0.692);
   border-radius: 10px;
+}
+#deco1 {
+  transform: rotate(180deg);
+  width: 6vw;
+  position: absolute;
+  left: 2%;
+  bottom: -2%;
+}
+#deco2 {
+  transform: rotate(180deg);
+  width: 6vw;
+  position: absolute;
+  right: 2%;
+  top: -2%;
 }
 #left {
   left: 12%;

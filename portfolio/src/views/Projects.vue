@@ -1,6 +1,11 @@
 <template>
   <div class="projects">
+    <GoHome class="homeIcon"/>
+    <GoContact class="contactIcon"/>
+    <GoAbout class="aboutIcon"/>
     <p id="titleProjects"> {{this.currentCategory}} </p>
+    <img id="deco1" alt="deco" src="@/assets/img/lines4.png">
+    <img id="deco2" alt="deco" src="@/assets/img/lines6.png">
       <div id="contentProjects">
           <div id="navigation">
             <!--<CategoryBar/>-->
@@ -25,12 +30,18 @@
 
 <script>
 import ProjectItem from '@/components/ProjectItem.vue'
+import GoHome from '@/components/GoHome.vue'
+import GoContact from '@/components/GoContact.vue'
+import GoAbout from '@/components/GoAbout.vue'
 /*import CategoryBar from '@/components/CategoryBar.vue'*/
 import projectData from '@/datas/projects'
 
 export default {
   name: 'Projects',
   components: {
+    GoHome,
+    GoContact,
+    GoAbout,
     ProjectItem/*,
     CategoryBar*/
   },
@@ -48,7 +59,20 @@ export default {
         this.getCategory()
     },
     getCategory(){
-      this.currentCategory = this.$route.params.catName
+      if(this.$route.params.catName == 'Illustration'
+        || this.$route.params.catName == 'Graphisme'
+        || this.$route.params.catName == 'Audiovisuel'
+        || this.$route.params.catName == 'Web'
+        || this.$route.params.catName == 'Animation'
+        || this.$route.params.catName == 'InstallationInteractive'
+        || this.$route.params.catName == 'Projet3D'
+        || this.$route.params.catName == 'Développement'
+        || this.$route.params.catName == 'All'
+      ){
+        this.currentCategory = this.$route.params.catName
+      } else {
+        this.$router.push({name:'Home'})
+      }
     },
     verifCategory:
       function (projet) {
@@ -82,6 +106,18 @@ export default {
   width: 100%;
   height: 100%;
 }
+#deco1 {
+  width: 2.3vw;
+  position: absolute;
+  left: 2%;
+  bottom: 0%;
+}
+#deco2 {
+  width: 5vw;
+  position: absolute;
+  right: 2%;
+  top: 0%;
+}
 #titleProjects {
   color: #C1272D;
   position: absolute;
@@ -101,6 +137,21 @@ export default {
   margin-top: 8%;
   margin-bottom: 8%;
   background-color: white;
+}
+.contactIcon {
+  position: absolute;
+  right: 6.2%;
+  top: 4%;
+}
+.aboutIcon {
+  position: absolute;
+  right: 10%;
+  top: 4%;
+}
+.homeIcon {
+  position: absolute;
+  left: 2%;
+  top: 4%;
 }
 .listProjects {
   margin: 1% 3%;
