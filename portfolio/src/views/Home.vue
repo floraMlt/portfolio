@@ -3,7 +3,7 @@
       <div id="blocTxt">
         <div id="title">
           <h1>Flora Mallet</h1>
-          <img class="point" src="../assets/img/point.png" alt="point bleu">
+          <img class="point" src="../assets/img/deco/point.png" alt="point bleu">
         </div>
         <div id="txtButton">
             <p id="txt">
@@ -47,7 +47,7 @@ h1 {
   justify-content: flex-end;
   max-width: 60%;
   right: -8%;
-  top: 20%;
+  top: 23%;
 }
 #txtButton {
     width: 50%;

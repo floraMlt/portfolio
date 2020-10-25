@@ -5,8 +5,8 @@
       </i>Retour aux projets
     </router-link>
     <!--<simplebar data-simplebar-auto-hide="false"/>-->
-    <img id="deco1" alt="deco" src="@/assets/img/lines5.png">
-    <img id="deco2" alt="deco" src="@/assets/img/lines.png">
+    <img id="deco1" alt="deco" src="@/assets/img/deco/lines5.png">
+    <img id="deco2" alt="deco" src="@/assets/img/deco/lines.png">
     <div id="content">
       <div id="txt">
         <h1> {{this.currentProjectData.title}} </h1>
@@ -173,7 +173,7 @@ h1{
   text-align: right;
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 33%;
   margin-right: 1.5%;
 }
 #mainImg {

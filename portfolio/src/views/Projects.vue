@@ -4,8 +4,8 @@
     <GoContact class="contactIcon"/>
     <GoAbout class="aboutIcon"/>
     <p id="titleProjects"> {{this.currentCategory}} </p>
-    <img id="deco1" alt="deco" src="@/assets/img/lines4.png">
-    <img id="deco2" alt="deco" src="@/assets/img/lines6.png">
+    <img id="deco1" alt="deco" src="@/assets/img/deco/lines4.png">
+    <img id="deco2" alt="deco" src="@/assets/img/deco/lines6.png">
       <div id="contentProjects">
           <div id="navigation">
             <!--<CategoryBar/>-->
