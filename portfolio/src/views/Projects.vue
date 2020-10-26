@@ -102,7 +102,7 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color:#1B1464;
+  background-color: #1b155f;
   width: 100%;
   height: 100%;
 }
@@ -136,16 +136,16 @@ export default {
   border-radius: 20px;
   margin-top: 8%;
   margin-bottom: 8%;
-  background-color: white;
+  background-color:#ffffff78;
 }
 .contactIcon {
   position: absolute;
-  right: 6.2%;
+  left: 6.2%;
   top: 4%;
 }
 .aboutIcon {
   position: absolute;
-  right: 10%;
+  left: 10%;
   top: 4%;
 }
 .homeIcon {
@@ -160,8 +160,7 @@ export default {
 }
 .scroll {
   overflow: auto !important;
-  height: calc(100vh - 180px);
-  
+  max-height: calc(100vh - 180px);
   display: flex;
   justify-content: center;
   flex-flow: row wrap;

@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
     <sui-modal v-model="open">
-    <i class="closeIcon" @click="toggle"></i>
+    <i class="close icon" id= "closeIcon" @click="toggle"></i>
     <sui-image class="zoomImg" wrapped size="big" :src="this.imgSrc"/>
     </sui-modal>
   </div>
@@ -33,10 +33,12 @@ export default {
     border-radius: 10px !important;
     overflow: hidden;
 }
-.closeIcon {
+#closeIcon {
   z-index: 15;
   position: absolute;
   color: #C1272D;
+  top: 1%;
+  right: 1%;
 }
 .ui.modal {
   background-color: rgba(0,0,0,0) !important;
