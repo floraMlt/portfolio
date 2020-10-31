@@ -1,10 +1,11 @@
 <template>
   <div class="projectCategories">
-    <div class="icons">
+    <!--<div class="icons">
       <GoHome class="homeIcon iconAll"/>
       <GoContact class="contactIcon iconAll"/>
       <GoAbout class="aboutIcon iconAll"/>
-    </div>
+    </div>-->
+    <Menu class="menu"/>
     <img id="deco" src="../assets/img/deco/lines3.png" alt="déco">
     <Category v-for="category in categories" :key="category.id"
     :cat="category.cat" :src="category.src" :id="category.id" :alt="category.cat" :style="category.style"/>
@@ -14,17 +15,19 @@
 
 <script>
 import Category from '@/components/Category.vue'
-import GoHome from '@/components/GoHome.vue'
+import Menu from '@/components/Menu.vue'
+/*import GoHome from '@/components/GoHome.vue'
 import GoContact from '@/components/GoContact.vue'
-import GoAbout from '@/components/GoAbout.vue'
+import GoAbout from '@/components/GoAbout.vue'*/
 
 export default {
   name: 'ProjectCategories',
   components: {
     Category,
-    GoHome,
+    Menu,
+    /*GoHome,
     GoContact,
-    GoAbout
+    GoAbout*/
   },
   data() {
     return {
@@ -52,18 +55,8 @@ export default {
   min-width: 100%;
   min-height: 100%;
 }
-.icons {
+.menu {
   position: absolute;
-  left: 3%;
-  top: 4%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: space-between;
-}
-.iconAll {
-  position: relative;
-  margin: 22% 0;
 }
 #deco {
   position: absolute;

@@ -1,6 +1,7 @@
 <template>
-  <div class="goContact">
-    <i class="at icon atPicto" @click="goContact"> <p class="contact">Contact</p></i>
+  <div class="goContact" @click="goContact">
+    <img class="atPicto" alt="Picto Contact" src="@/assets/img/menu/contactPicto.png">
+    <p class="contact">Contacts</p>
   </div>
 </template>
 
@@ -19,7 +20,7 @@ export default {
 <style scoped>
 .atPicto {
   color: white;
-  font-size: 1.4em;
+  width: 50%;
   opacity: 0.8;
   display: flex;
   justify-content: center;
@@ -30,9 +31,17 @@ export default {
   opacity: 1;
 }
 .contact {
-  font-size: 0.7em;
+  font-size: 1em;
   font-family: 'Roboto';
   font-weight: lighter;
   color: white;
+  width: max-content;
+}
+.goContact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
 }
 </style>

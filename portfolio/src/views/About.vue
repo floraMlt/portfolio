@@ -1,7 +1,9 @@
 <template>
   <div class="about">
-    <GoHome class="homeIcon"/>
-    <GoContact class="contactIcon"/>
+    <div class="icons">
+      <GoHome class="homeIcon"/>
+      <GoContact class="contactIcon"/>
+    </div>
     <h2 class="title">A propos de moi</h2>
     <p class="txt">Je cherche un stage de 6 mois à partir d'avril 2020</p>
     <div @click="toggleModal" class="zoomCv"><p>Mon CV</p></div>
@@ -60,13 +62,19 @@ export default {
   height: 10% !important;
 }
 .contactIcon {
-  position: absolute;
-  left: 6%;
-  top: 4%;
+  width: 18%;
+  margin-left: 1%;
+  margin-top: 2.5%;
 }
 .homeIcon {
+  width: 20%;
+}
+.icons {
   position: absolute;
-  left: 2%;
-  top: 4%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  left: 1.3%;
+  top: 30px;
 }
 </style>

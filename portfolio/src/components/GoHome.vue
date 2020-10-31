@@ -1,6 +1,7 @@
 <template>
-  <div class="goHome">
-    <i class="home icon accueilPicto" @click="goHome"> <p class="accueil">Home</p></i>
+  <div class="goHome" @click="goHome">
+    <img class="accueilPicto" alt="Picto Home" src="@/assets/img/menu/homePicto.png">
+    <p class="accueil">Accueil</p>
   </div>
 </template>
 
@@ -19,7 +20,7 @@ export default {
 <style scoped>
 .accueilPicto {
   color: white;
-  font-size: 1.4em;
+  width: 50%;
   opacity: 0.8;
   display: flex;
   justify-content: center;
@@ -30,9 +31,17 @@ export default {
   opacity: 1;
 }
 .accueil {
-  font-size: 0.7em;
+  font-size: 1em;
   font-family: 'Roboto';
   font-weight: lighter;
   color: white;
+  width: max-content;
+}
+.goHome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
 }
 </style>

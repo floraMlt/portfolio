@@ -1,8 +1,6 @@
 <template>
   <div class="projects">
-    <GoHome class="homeIcon"/>
-    <GoContact class="contactIcon"/>
-    <GoAbout class="aboutIcon"/>
+    <MenuVert/>
     <p id="titleProjects"> {{this.currentCategory}} </p>
     <img id="deco1" alt="deco" src="@/assets/img/deco/lines4.png">
     <img id="deco2" alt="deco" src="@/assets/img/deco/lines6.png">
@@ -30,18 +28,14 @@
 
 <script>
 import ProjectItem from '@/components/ProjectItem.vue'
-import GoHome from '@/components/GoHome.vue'
-import GoContact from '@/components/GoContact.vue'
-import GoAbout from '@/components/GoAbout.vue'
+import MenuVert from '@/components/MenuVert.vue'
 /*import CategoryBar from '@/components/CategoryBar.vue'*/
 import projectData from '@/datas/projects'
 
 export default {
   name: 'Projects',
   components: {
-    GoHome,
-    GoContact,
-    GoAbout,
+    MenuVert,
     ProjectItem/*,
     CategoryBar*/
   },
@@ -110,18 +104,18 @@ export default {
   width: 2.3vw;
   position: absolute;
   left: 2%;
-  bottom: 0%;
+  bottom: 0;
 }
 #deco2 {
   width: 5vw;
   position: absolute;
   right: 2%;
-  top: 0%;
+  top: 0;
 }
 #titleProjects {
   color: #C1272D;
   position: absolute;
-  top: 3vh;
+  top: 20px;
   margin:0px;
   font-family: "bodoniR";
   font-size: 2.8em;
@@ -134,9 +128,10 @@ export default {
   flex-flow: row wrap;
   justify-content: center;
   border-radius: 20px;
-  margin-top: 8%;
-  margin-bottom: 8%;
+  margin-top: 120px;
+  margin-bottom: 120px;
   background-color:#ffffff78;
+  /*border: 1.5px solid rgba(255, 255, 255, 1);*/
 }
 .contactIcon {
   position: absolute;
@@ -154,7 +149,7 @@ export default {
   top: 4%;
 }
 .listProjects {
-  margin: 1% 3%;
+  margin: 10px 3%;
   position: relative;
   z-index: 2;
 }
@@ -166,7 +161,7 @@ export default {
   flex-flow: row wrap;
   position: relative;
   width: 100%;
-  margin-top: 4%;
+  margin-top: 39px;
 }
 #navigation {
   position: fixed;

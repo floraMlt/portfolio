@@ -1,7 +1,9 @@
 <template>
   <div class="contact">
-    <GoHome class="homeIcon"/>
-    <GoAbout class="aboutIcon"/>
+    <div class="icons">
+      <GoHome class="homeIcon"/>
+      <GoAbout class="aboutIcon"/>
+    </div>
     <h1 class="title">Me contacter</h1>
     <div class="contactList">
       <div class="contactPoint">
@@ -56,7 +58,6 @@ export default {
   font-size: 1.2em;
   font-weight: bolder;
   margin-right: 1%;
-  /*width: 30%;*/
 }
 .txt {
   font-family: 'Roboto';
@@ -69,13 +70,18 @@ export default {
   align-items: center;
 }
 .aboutIcon {
-  position: absolute;
-  left: 5%;
-  top: 4%;
+  width: 16%;
+  margin-left: 3%;
 }
 .homeIcon {
+  width: 20%;
+}
+.icons {
   position: absolute;
-  left: 2%;
-  top: 4%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  left: 1.3%;
+  top: 30px;
 }
 </style>

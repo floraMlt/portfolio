@@ -36,7 +36,7 @@ h1 {
     font-size: 4em;
     color: #C1272D;
     width: 40%;
-    margin-bottom: 1%;
+    margin-bottom: 10px;
     display: flex;
     justify-content: flex-end;
 }
@@ -47,12 +47,12 @@ h1 {
   justify-content: flex-end;
   max-width: 60%;
   right: -8%;
-  top: 23%;
+  top: 170px;
 }
 #txtButton {
-    width: 50%;
-    margin: 0;
-    margin-left: 5%;
+  width: 50%;
+  margin: 0;
+  margin-left: 5%;
 }
 #txt {
   text-align: justify;
@@ -60,7 +60,7 @@ h1 {
 #buttonGo {
   width: 50%;
   margin-left: 25%;
-  margin-top: 5%;
+  margin-top: 20px;
 }
 #title {
   display: flex;
@@ -69,8 +69,9 @@ h1 {
   margin-right: 11%;
 }
 .point {
-margin-left: 2%;
-margin-right: 10%;
+  margin-left: 2%;
+  margin-right: 10%;
+  margin-bottom:40px;
 }
 </style>
 

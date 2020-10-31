@@ -12,6 +12,7 @@
         <h1> {{this.currentProjectData.title}} </h1>
         <p>{{this.currentProjectData.text}}</p>
         <p>{{this.currentProjectData.date}}</p>
+        <ButtonSeeProject id="seeProject" :linkP="this.currentProjectData.link"/>
       </div>
       <Modal ref="modal" :imgSrc="this.currentImgSrc" class="modalImg"/>
       <img id="mainImg" :alt="this.currentProjectData.title" :src="this.currentProjectData.img">
@@ -29,6 +30,7 @@
 import projets from '@/datas/projects'
 import projetsIndex from '@/datas/projectsIndex'
 import Modal from '@/components/Modal.vue'
+import ButtonSeeProject from '@/components/ButtonSeeProject.vue'
 /*import simplebar from 'simplebar-vue';
 import 'simplebar/dist/simplebar.min.css';*/
 
@@ -38,7 +40,6 @@ export default {
     this.verifProject()
   },
   methods : {
-
     hideLeft() {
       this.first--
       this.last--
@@ -68,7 +69,8 @@ export default {
     }
   },
   components: {
-    Modal
+    Modal,
+    ButtonSeeProject
     /*simplebar*/
   }
 }
@@ -87,7 +89,7 @@ h1{
 }
 .fleche {
   position: absolute;
-  top: 50%;
+  top: 125px;
   transform: translateY(-50%);
   font-size: 1.7em;
   color: #280047;
@@ -106,7 +108,7 @@ h1{
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  margin-top: 2%;
+  margin-top: 15px;
   position: relative;
 }
 .images{
@@ -120,14 +122,14 @@ h1{
   width: 6vw;
   position: absolute;
   left: 2%;
-  bottom: -2%;
+  bottom: -5px;
 }
 #deco2 {
   transform: rotate(180deg);
   width: 6vw;
   position: absolute;
   right: 2%;
-  top: -2%;
+  top: -5px;
 }
 #left {
   left: 12%;
@@ -161,13 +163,16 @@ h1{
   color: #280047;
   font-family: "Roboto";
   font-weight: lighter;
-  /*font-size: 0.7em;*/
 }
 #content {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 3%;
+  margin-top: 46px;
+}
+#seeProject {
+  display: flex;
+  align-self: center;
 }
 </style>
