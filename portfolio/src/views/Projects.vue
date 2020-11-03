@@ -2,8 +2,8 @@
   <div class="projects">
     <MenuVert/>
     <p id="titleProjects"> {{this.currentCategory}} </p>
-    <img id="deco1" alt="deco" src="@/assets/img/deco/lines4.png">
-    <img id="deco2" alt="deco" src="@/assets/img/deco/lines6.png">
+    <img id="deco1" alt="deco" src="@/assets/img/deco/linesNewBlanc.png">
+    <img id="deco2" alt="deco" src="@/assets/img/deco/linesNewBlanc1.png">
       <div id="contentProjects">
           <div id="navigation">
             <!--<CategoryBar/>-->

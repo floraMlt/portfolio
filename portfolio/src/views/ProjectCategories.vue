@@ -65,9 +65,9 @@ export default {
 }
 #deco2 {
   position: absolute;
-  max-height: 100vh;
+  max-height: 90vh;
   width: auto;
-  right: 0;
-  top: 5%;
+  right: 1%;
+  top: 100px;
 }
 </style>

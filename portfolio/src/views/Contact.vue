@@ -15,6 +15,7 @@
         <p class="txt">floramallet@outlook.fr</p>
       </div>
     </div>
+    <img id="meB" alt="dessin" src="@/assets/img/deco/meBlc.png">
   </div>
 </template>
 
@@ -36,7 +37,8 @@ export default {
   display: flex;
   flex-direction: row;
   width: 40%;
-  justify-content: space-between;
+  justify-content: center;
+  margin-bottom: 100px;
 }
 .contact {
   position: relative;
@@ -52,6 +54,8 @@ export default {
 .title {
   font-family: 'bodoniB';
   font-size: 2.6em;
+  margin-bottom: 50px;
+  color: #C1272D;
 }
 .ssTitle {
   font-family: 'Roboto';
@@ -68,6 +72,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 50px;
 }
 .aboutIcon {
   width: 16%;
@@ -83,5 +88,11 @@ export default {
   align-items: flex-start;
   left: 1.3%;
   top: 30px;
+}
+#meB {
+  position: absolute;
+  width: 35%;
+  left: 70%;
+  top: 190px;
 }
 </style>

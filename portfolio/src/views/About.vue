@@ -9,6 +9,7 @@
     <div @click="toggleModal" class="zoomCv"><p>Mon CV</p></div>
     <!--<div class="modalCv"><ModalCV ref="modalCv" :imgSrc="this.cvLink"/></div>-->
     <ModalCV ref="modalCv"/>
+    <img id="meB" alt="dessin" src="@/assets/img/deco/meBlc.png">
   </div>
 </template>
 
@@ -53,6 +54,7 @@ export default {
   font-family: 'bodoniR';
   font-size: 3em;
   font-weight: lighter;
+  color: #C1272D;
 }
 .txt {
   font-family: 'Roboto';
@@ -60,6 +62,12 @@ export default {
 }
 .modalCv {
   height: 10% !important;
+}
+.zoomCv {
+  border: #C1272D 0.5px solid;
+  border-radius: 18px;
+  font-size: 1.2em;
+  padding: 0.5% 1%;
 }
 .contactIcon {
   width: 18%;
@@ -76,5 +84,11 @@ export default {
   align-items: flex-start;
   left: 1.3%;
   top: 30px;
+}
+#meB {
+  position: absolute;
+  width: 35%;
+  left: 70%;
+  top: 190px;
 }
 </style>
