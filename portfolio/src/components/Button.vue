@@ -30,5 +30,10 @@ export default {
   display: flex;
   justify-content: center;
 }
-
+/* RESPONSIVE */
+@media (max-width: 508px){
+  #decoButton {
+    font-size: 1.2em;
+  }
+}
 </style>

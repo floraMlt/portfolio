@@ -1,6 +1,6 @@
 <template>
   <div class="category">
-    <img class="imgCat" :id="this.idImg" :src="this.srcImg" :alt="this.catName" :style="this.styleImg" v-on:click="go">
+    <img class="imgCat" :id="this.idImg" :src="this.srcImg" :alt="this.catName" v-on:click="go">
   </div>
 </template>
 
@@ -8,17 +8,15 @@
 export default {
   name: 'Category',
   props: {
-      cat:{type:String, required:true},
-      src:{type:String, required:true},
-      id:{type:String, required:true},
-      style:{type:String, required:true}
+      imgCat:{type:String, required:true},
+      imgSrc:{type:String, required:true},
+      imgId:{type:String, required:true}
   },
   data() {
     return {
-      catName : this.cat,
-      srcImg : this.src,
-      idImg : this.id,
-      styleImg : this.style
+      catName : this.imgCat,
+      srcImg : this.imgSrc,
+      idImg : this.imgId
     }
   },
   methods: {
@@ -32,5 +30,42 @@ export default {
 <style scoped>
 .imgCat {
   height: 16vh;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1120px){
+  .imgCat {
+    height: 15vh;
+  }
+}
+@media (max-width: 1000px){
+  .imgCat {
+    height: 14.5vh;
+  }
+}
+@media (max-width: 930px){
+  .imgCat {
+    height: 13vh;
+  }
+}
+@media (max-width: 808px){
+  .imgCat {
+    height: 12vh;
+  }
+}
+@media (max-width: 750px){
+  .imgCat {
+    height: 11vh;
+  }
+}
+@media (max-width: 520px){
+  .imgCat {
+    height: 10vh;
+  }
+}
+@media (max-width: 400px){
+  #devJv {
+    height: 9.2vh;
+  }
 }
 </style>

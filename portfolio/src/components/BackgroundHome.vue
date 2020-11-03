@@ -22,7 +22,6 @@ export default {
 }
 #me {
   margin-right: 25%;
-  /*height: 65vh;*/
   width: 23vw;
 }
 #lines {
@@ -33,5 +32,63 @@ export default {
   margin-bottom: 2%;
   margin-right: 2%;
   width: 25vw;
+}
+
+/* RESPONSIVE */
+@media (max-width: 980px){
+  #me {
+    width: 28vw;
+    margin-right: 15%;
+  }
+  #txt {
+    width: 144%;
+  }
+}
+@media (max-width: 820px){
+  #me {
+    width: 28vw;
+    margin-right: 15%;
+  }
+}
+@media (max-width: 720px){
+  #lines {
+    max-height: 80vh;
+    margin-top: 145px;
+  }
+  #me {
+    width: 28vw;
+    margin-right: -17%;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 545px){
+  #me {
+    width: 30vw;
+  }
+}
+@media (max-width: 508px){
+  #lines {
+    max-height: 75vh;
+    margin-top: 182px;
+  }
+  #me {
+    width: 36vw;
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 385px){
+  #lines {
+    max-height: 68vh;
+    margin-top: 231px;
+    margin-left: -4.5%;
+  }
+  #linesB {
+    display: none;
+  }
+  #me {
+    width: 42vw;
+    margin-bottom: 53px;
+    margin-right: 25%;
+  }
 }
 </style>

@@ -1,7 +1,8 @@
 <template>
-  <div class="goAbout" @click="goAbout">
-    <!--<img class="aboutPicto" alt="Picto About" src="@/assets/img/menu/aboutPicto.png">-->
-    <img class="aboutPicto" alt="Picto About" :src="this.activeSrc" @onmouseover="changePicto">
+  <div class="goAbout">
+  <!--<div class="goAbout" @click="goAbout">-->
+    <img class="aboutPicto" alt="Picto About" src="@/assets/img/menu/aboutPicto.png">
+    <!--<img class="aboutPicto" alt="Picto About" :src="this.activeSrc" @onmouseover="changePicto">-->
     <p class="about">A propos</p>
   </div>
 </template>
@@ -10,7 +11,7 @@
 
 export default {
   name: 'GoAbout',
-  data(){
+  /*data(){
     return {
       srcPictoW : require('@/assets/img/menu/aboutPicto.png'),
       srcPictoR : require('@/assets/img/menu/aboutPictoR.png'),
@@ -19,11 +20,11 @@ export default {
   },
   mounted () {
     this.activeSrc = this.srcPictoW
-  },
+  },*/
   methods:{
     goAbout(){
       this.$router.push('/About')
-    },
+    }/*,
     changePicto(){
       console.log("src" + this.activeSrc)
       if(this.activeSrc == this.srcPictoW){
@@ -34,7 +35,7 @@ export default {
         this.activeSrc = this.srcPictoW
         console.log("red src : "+this.activeSrc)
       }
-    }
+    }*/
   }
 }
 </script>
