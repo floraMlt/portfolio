@@ -62,6 +62,7 @@ img {
 }
 #resumeProject {
   font-size: 0.9em;
+  width: 95%;
 }
 #titleProject {
   margin-top: 1%;
@@ -70,5 +71,18 @@ img {
   width: 187px;
   margin-left: auto;
   margin-right: auto;
+}
+#txt { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 628px){
+  .projectItem {
+    padding: 1% 0.9%;
+  }
 }
 </style>

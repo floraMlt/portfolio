@@ -30,4 +30,12 @@ export default {
   justify-content: center;
 }
 
+/* REPONSIVE */
+@media (max-width: 628px){
+  #decoButton {
+    width: 61%;
+    padding: 1.5% 3%;
+    font-size: 1.2em;
+  }
+}
 </style>

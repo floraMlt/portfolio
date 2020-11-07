@@ -1,8 +1,6 @@
 <template>
-  <div class="goAbout">
-  <!--<div class="goAbout" @click="goAbout">-->
+  <div class="goAbout" @click="goAbout">
     <img class="aboutPicto" alt="Picto About" src="@/assets/img/menu/aboutPicto.png">
-    <!--<img class="aboutPicto" alt="Picto About" :src="this.activeSrc" @onmouseover="changePicto">-->
     <p class="about">A propos</p>
   </div>
 </template>
@@ -11,31 +9,10 @@
 
 export default {
   name: 'GoAbout',
-  /*data(){
-    return {
-      srcPictoW : require('@/assets/img/menu/aboutPicto.png'),
-      srcPictoR : require('@/assets/img/menu/aboutPictoR.png'),
-      activeSrc : null
-    }
-  },
-  mounted () {
-    this.activeSrc = this.srcPictoW
-  },*/
   methods:{
     goAbout(){
       this.$router.push('/About')
-    }/*,
-    changePicto(){
-      console.log("src" + this.activeSrc)
-      if(this.activeSrc == this.srcPictoW){
-        console.log("white src 1 : "+this.activeSrc)
-        this.activeSrc = this.srcPictoR
-        console.log("white src 2 : "+this.activeSrc)
-      } else if(this.activeSrc == this.srcPictoR){
-        this.activeSrc = this.srcPictoW
-        console.log("red src : "+this.activeSrc)
-      }
-    }*/
+    }
   }
 }
 </script>
@@ -66,5 +43,21 @@ export default {
   align-items: center;
   width: 100%;
   height: fit-content;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px){
+  .aboutPicto { width: 77%; }
+  .about { font-size: 0.9em; }
+}
+@media (max-width: 700px){
+  .aboutPicto { width: 110%; }
+}
+@media (max-width: 510px){
+  .aboutPicto { width: 140%; }
+}
+@media (max-width: 420px){
+  .aboutPicto { width: 130%; }
+  .about { font-size: 0.8em; }
 }
 </style>

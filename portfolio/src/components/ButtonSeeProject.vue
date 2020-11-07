@@ -1,6 +1,6 @@
 <template>
   <div class="buttonSeeProject">
-    <a :href="this.link" target="_blank"> 
+    <a v-if="this.link" :href="this.link" target="_blank"> 
       <button type="button" id="decoButton">Voir le projet</button>
     </a>
   </div>
@@ -15,8 +15,13 @@ export default {
   },
   data(){
     return{
-      link:this.linkP
+      link:this.linkP,
+      isThereLink : false
     }
+  },
+  mounted (){
+    if(this.link == "") { this.isThereLink = false; }
+    else { this.isThereLink = true; }
   }
 }
 </script>

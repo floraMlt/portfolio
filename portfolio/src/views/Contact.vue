@@ -4,15 +4,17 @@
       <GoHome class="homeIcon"/>
       <GoAbout class="aboutIcon"/>
     </div>
-    <h1 class="title">Me contacter</h1>
-    <div class="contactList">
-      <div class="contactPoint">
-        <p class="ssTitle">Tel</p>
-        <p class="txt">+(33)6 34 82 04 52</p>
-      </div>
-      <div class="contactPoint">
-        <p class="ssTitle">Mail</p>
-        <p class="txt">floramallet@outlook.fr</p>
+    <div class="content">
+      <h1 class="title">Me contacter</h1>
+      <div class="contactList">
+        <div class="contactPoint">
+          <p class="ssTitle">Tel</p>
+          <p class="txt">+(33)6 34 82 04 52</p>
+        </div>
+        <div class="contactPoint">
+          <p class="ssTitle">Mail</p>
+          <p class="txt">floramallet@outlook.fr</p>
+        </div>
       </div>
     </div>
     <img id="meB" alt="dessin" src="@/assets/img/deco/meBlc.png">
@@ -29,6 +31,10 @@ export default {
     GoHome,
     GoAbout
   },
+  mounted() {
+    window.addEventListener('resize', this.onResize)
+    this.$parent.onResize()
+  }
 }
 </script>
 
@@ -36,7 +42,6 @@ export default {
 .contactList {
   display: flex;
   flex-direction: row;
-  width: 40%;
   justify-content: center;
   margin-bottom: 100px;
 }
@@ -50,6 +55,12 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .title {
   font-family: 'bodoniB';
@@ -91,8 +102,49 @@ export default {
 }
 #meB {
   position: absolute;
-  width: 35%;
+  width: 20%;
   left: 70%;
-  top: 190px;
+  bottom: 30px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px){
+  .icons { width: 24%; }
+  .aboutIcon { margin-left: 11%; }
+  .homeIcon { margin-left: 5%; }
+  #meB { width: 25%; }
+  .title { font-size: 2.5em; margin-bottom: 35px; }
+  .ssTitle { font-size: 1.1em; }
+  .txt { font-size: 0.9em; }
+  .contactPoint { margin: 0 40px; }
+  .content { margin-bottom: 10%; }
+}
+@media (max-width: 870px){
+  .icons { width: 28%; }
+  #meB { width: 29%; left: 65%; }
+  .content { margin-bottom: 15%; }
+}
+@media (max-width: 680px){
+  .aboutIcon { margin-left: 18%; }
+  .homeIcon { margin-left: 10%; }
+  #meB { width: 35%; left: 60%; }
+  .content { margin-bottom: 20%; }
+}
+@media (max-width: 550px){
+  .aboutIcon { margin-left: 25%; }
+  .homeIcon { margin-left: 15%; }
+  #meB { width: 40%; left: 55%; }
+  .content { margin-bottom: 25%; }
+}
+@media (max-width: 440px){
+  .icons { width: 32%; }
+  .aboutIcon { margin-left: 35%; }
+  .homeIcon { margin-left: 25%; }
+  #meB { width: 50%; left: 20%; }
+  .title { font-size: 2.4em; margin-bottom: 20px; }
+  .ssTitle { font-size: 1em; }
+  .txt { font-size: 0.8em; text-align: center; }
+  .contactPoint { margin: 0 20px; }
+  .content { margin-bottom: 30%; }
 }
 </style>

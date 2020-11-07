@@ -44,4 +44,23 @@ export default {
   width: 100%;
   height: fit-content;
 }
+/* RESPONSIVE */
+@media (max-width: 1100px){
+  .accueilPicto { width: 77%; }
+  .accueil { font-size: 0.9em; }
+}
+@media (max-width: 780px){
+  .accueilPicto { width: 90%; }
+  .accueil { font-size: 0.85em; }
+}
+@media (max-width: 700px){
+  .accueilPicto { width: 110%; }
+}
+@media (max-width: 510px){
+  .accueilPicto { width: 140%; }
+}
+@media (max-width: 420px){
+  .accueilPicto { width: 130%; }
+  .accueil { font-size: 0.8em; }
+}
 </style>

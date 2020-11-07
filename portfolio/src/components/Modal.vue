@@ -44,4 +44,25 @@ export default {
   background-color: rgba(0,0,0,0) !important;
   width: 50% !important;
 }
+
+/* RESPONSIVE */
+@media (max-width: 1000px){
+  #closeIcon {
+    top: -2px !important;
+    right: -2px !important;
+  }
+  .ui.modal {
+    width: 66% !important;
+  }
+}
+@media (max-width: 650px){
+  #closeIcon {
+    top: -5px !important;
+    right: -5px !important;
+    font-size: 1em;
+  }
+  .ui.modal {
+    width: 75% !important;
+  }
+}
 </style>

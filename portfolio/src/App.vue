@@ -6,7 +6,23 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  methods : {
+    onResize() {
+      document.querySelector('body').style.overflow = "hidden"
+      document.querySelector('html').style.overflow = "hidden"
+      document.querySelector('#app').style.overflow = "hidden"
+
+      if(this.$route.name == "ProjectDetails" && window.innerWidth <= 1000) {
+        document.querySelector('body').style.overflowY = "scroll"
+        document.querySelector('#app').style.height = "auto"
+      }
+    }
+  },
+  mounted() {
+    window.addEventListener('resize', this.onResize)
+    this.onResize()
+  }
 }
 </script>
 
@@ -36,5 +52,17 @@ export default {
 }
 body {
   margin: 0;
+}
+body, html {
+  height: 100%;
+  width: 100%;
+  min-height: 100%;
+  min-width: 100%;
+}
+#app {
+  height: 100%;
+  width: 100%;
+  min-height: 100%;
+  min-width: 100%;
 }
 </style>

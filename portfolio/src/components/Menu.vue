@@ -86,8 +86,23 @@ export default {
 @media (max-width: 1100px){
   .menu { 
     top: 13px;
-    left: 838px;
+    left: 86%;
     right: 0;
   }
+  .menuPicto { width: 3.5vw; }
+  .cache { width: 6vw; }
+}
+@media (max-width: 876px){
+  .menuPicto { width: 4vw; }
+  .cache { width: 7.5vw; }
+}
+@media (max-width: 757px){
+  .menuPicto { width: 4.5vw; }
+  .cache { width: 9vw; }
+}
+@media (max-width: 590px){
+  .menu { left: 82%; }
+  .menuPicto { width: 6.5vw; }
+  .cache { width: 15vw; }
 }
 </style>

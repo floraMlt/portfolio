@@ -79,4 +79,25 @@ export default {
 .isOpen {
   top: 0px !important;
 }
+
+/* RESPONSIVE*/
+@media (max-width: 2212px){
+  .cache { width: 5.5vw; }
+}
+@media (max-width: 1100px){
+  .menuPicto { width: 3.5vw; }
+  .cache { width: 6vw; }
+}
+@media (max-width: 876px){
+  .menuPicto { width: 4vw; }
+  .cache { width: 7.5vw; }
+}
+@media (max-width: 757px){
+  .menuPicto { width: 4.5vw; }
+  .cache { width: 9vw; }
+}
+@media (max-width: 590px){
+  .menuPicto { width: 6.5vw; }
+  .cache { width: 15vw; }
+}
 </style>

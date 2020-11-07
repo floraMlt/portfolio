@@ -2,8 +2,7 @@
   <div id="modalcv">
     <sui-modal v-model="open">
     <i class="closeIcon" @click="toggle"></i>
-    <!--<sui-image class="zoomImg" wrapped :src="this.imgSrc"/>-->
-    <img class="imgCV" alt="cv" src="../assets/img/cv.jpg"/>
+    <img class="imgCV" alt="cv" src="../assets/img/cvNew.jpg"/>
     </sui-modal>
   </div>
 </template>
@@ -14,12 +13,9 @@ export default {
   data() {
     return { 
         open: false,
-        cvLink: require("@/assets/img/cv.jpg")
+        cvLink: require("@/assets/img/cvNew.jpg")
     };
   },
-  /*props: {
-    imgSrc:{type:String, required:true}
-  },*/
   methods: {
     toggle() {
       this.open = !this.open;
@@ -36,7 +32,6 @@ export default {
 }
 .zoomImg{
     width: 20vw !important;
-    /*border-radius: 10px !important;*/
     overflow: hidden !important;
 }
 .closeIcon {

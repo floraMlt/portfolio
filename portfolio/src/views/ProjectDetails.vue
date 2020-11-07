@@ -2,20 +2,21 @@
   <div class="projectDetails">
     <router-link :to="{name: 'Projects'}" id="retour">
       <i class="arrow alternate circle left outline icon projects">
-      </i>Retour aux projets
+      </i> <p class="txtRetour">Retour aux projets</p>
     </router-link>
-    <!--<simplebar data-simplebar-auto-hide="false"/>-->
     <img id="deco1" alt="deco" src="@/assets/img/deco/lines5.png">
     <img id="deco2" alt="deco" src="@/assets/img/deco/lines.png">
     <div id="content">
-      <div id="txt">
-        <h1> {{this.currentProjectData.title}} </h1>
-        <p>{{this.currentProjectData.text}}</p>
-        <p>{{this.currentProjectData.date}}</p>
-        <ButtonSeeProject id="seeProject" :linkP="this.currentProjectData.link"/>
+      <div id="contentTop">
+        <div id="txt">
+          <h1> {{this.currentProjectData.title}} </h1>
+          <p class="txtContent">{{this.currentProjectData.text}}</p>
+          <p class="txtContent">{{this.currentProjectData.date}}</p>
+          <ButtonSeeProject id="seeProject" :linkP="this.currentProjectData.link"/>
+        </div>
+        <Modal ref="modal" :imgSrc="this.currentImgSrc" class="modalImg"/>
+        <img id="mainImg" :alt="this.currentProjectData.title" :src="this.currentProjectData.img">
       </div>
-      <Modal ref="modal" :imgSrc="this.currentImgSrc" class="modalImg"/>
-      <img id="mainImg" :alt="this.currentProjectData.title" :src="this.currentProjectData.img">
       <div v-if="this.currentProjectData.otherImg[0]" class="mosaicImg">
         <i id="left" class="angle left icon fleche" v-on:click="hideLeft" v-if="this.first > 0"></i>
         <img v-for="(imgOther, index) in this.currentProjectData.otherImg" :key="imgOther.id" alt="Images du projet" :src="imgOther" 
@@ -23,6 +24,8 @@
         <i id="right" class="angle right icon fleche" v-on:click="hideRight" v-if="this.last < (this.currentProjectData.otherImg.length -1)"></i>
       </div>
     </div>
+    <footer class="footer">
+    </footer>
   </div>
 </template>
 
@@ -31,8 +34,6 @@ import projets from '@/datas/projects'
 import projetsIndex from '@/datas/projectsIndex'
 import Modal from '@/components/Modal.vue'
 import ButtonSeeProject from '@/components/ButtonSeeProject.vue'
-/*import simplebar from 'simplebar-vue';
-import 'simplebar/dist/simplebar.min.css';*/
 
 export default {
   name: 'ProjectDetails',
@@ -71,7 +72,9 @@ export default {
   components: {
     Modal,
     ButtonSeeProject
-    /*simplebar*/
+  },
+  mounted() {
+    this.$parent.onResize()
   }
 }
 </script>
@@ -92,12 +95,14 @@ h1{
   top: 125px;
   transform: translateY(-50%);
   font-size: 1.7em;
-  color: #280047;
+  color: #1B1464;
 }
 .projectDetails {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  align-items: center;
+  align-content: center;
   -webkit-user-select: none; 
   -webkit-touch-callout: none; 
   -moz-user-select: none; 
@@ -113,9 +118,15 @@ h1{
 }
 .images{
   width: 22%;
-  margin: 0% 1%;
+  margin: 1%;
   border: 1px solid rgba(177, 177, 177, 0.692);
   border-radius: 10px;
+}
+.txtContent {
+  font-size: 0.95em;
+}
+.footer {
+  padding: 2% 0;
 }
 #deco1 {
   transform: rotate(180deg);
@@ -164,15 +175,54 @@ h1{
   font-family: "Roboto";
   font-weight: lighter;
 }
-#content {
+#contentTop {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 46px;
+  margin-top: 44px;
 }
 #seeProject {
   display: flex;
   align-self: center;
+}
+
+/* RESPONSIVE*/
+@media (max-width: 1300px){
+  .fleche { top: 52%; }
+}
+@media (max-width: 1000px){
+  #contentTop{ flex-direction: column-reverse; }
+  #txt {  width: 60%; text-align: center; }
+  #mainImg { margin: 30px 0 20px 0; width: 45%; }
+  #right { right: 8%; top: 56%; }
+  #left { left: 8.5%; top: 56%; }
+  .fleche { top: 75px; }
+  .hidden { display:inline; }
+  .fleche { display: none; }
+  .images{ width: 35%; }
+  .mosaicImg { margin-top: 0px; }
+}
+@media (max-width: 800px){
+  .txtRetour { font-size: smaller; }
+  #retour { flex-direction: column; align-items: center; top: 16px; left: 3%;}
+  #mainImg { width: 60%; }
+}
+@media (max-width: 550px){
+  h1 { font-size: 2.4em; }
+  .images{ width: 70%; }
+  .txtRetour { display: none; }
+  .txtContent { font-size: 0.95em; }
+  #deco1 { display: none; }
+  #deco2 { display: none; }
+  #mainImg { width: 60%; margin: 10px 0 10px 0;}
+  #retour { align-items: flex-start; }
+  #txt { width: 73%; }
+}
+@media (max-width: 450px){
+  h1 { font-size: 2.3em; }
+  .txtContent { font-size: 0.9em; }
+  #mainImg { width: 70%; }
+  #txt { width: 78%; }
 }
 </style>

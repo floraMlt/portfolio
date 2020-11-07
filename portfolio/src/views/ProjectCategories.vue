@@ -33,6 +33,10 @@ export default {
           {cat:"Audiovisuel", src: require("@/assets/img/lettrines/catAudio.png"), id:"audio"}
         ]
     }
+  },
+  mounted() {
+    window.addEventListener('resize', this.onResize)
+    this.$parent.onResize()
   }
 }
 </script>
@@ -111,13 +115,8 @@ export default {
   #graphisme { left: -15%; }
   #devJv { left: 30%; }
   #audio { left: 68%; }
-  #deco {
-    max-height: 95vh;
-  }
-  #deco2 {
-    max-height: 80vh;
-    top: 154px;
-  }
+  #deco { max-height: 95vh; }
+  #deco2 { max-height: 80vh; top: 154px; }
 }
 @media (max-width: 1120px){
   #illu { left: 51%; }
@@ -138,13 +137,8 @@ export default {
   #graphisme { left: -25%; }
   #devJv { left: 20%; top: 7%; }
   #audio { left: 65%; }
-  #deco {
-    max-height: 85vh;
-  }
-  #deco2 {
-    max-height: 70vh;
-    top: 216px;
-  }
+  #deco { max-height: 85vh; }
+  #deco2 { max-height: 70vh; top: 216px; }
 }
 @media (max-width: 930px){
   #illu { left: 29%; }
@@ -155,13 +149,8 @@ export default {
   #graphisme { left: -36%; top: 52%;}
   #devJv { left: 29%; top: 19%; }
   #audio { left: 101%; top: 16%;}
-  #deco {
-    max-height: 80vh;
-  }
-  #deco2 {
-    max-height: 67vh;
-    top: 241px;
-  }
+  #deco { max-height: 80vh; }
+  #deco2 { max-height: 67vh; top: 241px; }
 }
 @media (max-width: 756px){
   #illu { left: 122%; top: 284px; }
@@ -191,13 +180,8 @@ export default {
   #graphisme { left: -116%; }
   #devJv { left: 49%; }
   #audio { left: -1%; }
-  #deco {
-    max-height: 70vh;
-  }
-  #deco2 {
-    max-height: 60vh;
-    top: 294px;
-  }
+  #deco { max-height: 70vh; }
+  #deco2 { max-height: 60vh; top: 294px; }
 }
 @media (max-width: 450px){
   #illu { left: 95%; top: 255px;}
@@ -208,12 +192,7 @@ export default {
   #graphisme { left: -138%; top: -120px;}
   #devJv { left: 22%; top: 133px;}
   #audio { left: -23%; top: 52px;}
-  #deco {
-    max-height: 70vh;
-  }
-  #deco2 {
-    max-height: 60vh;
-    top: 294px;
-  }
+  #deco { max-height: 70vh; }
+  #deco2 { max-height: 60vh; top: 294px; }
 }
 </style>

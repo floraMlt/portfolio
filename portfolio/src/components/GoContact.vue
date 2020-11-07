@@ -44,4 +44,24 @@ export default {
   width: 100%;
   height: fit-content;
 }
+
+/* RESPONSIVE */
+@media (max-width: 1100px){
+  .atPicto { width: 77%; }
+  .contact { font-size: 0.9em; }
+}
+@media (max-width: 780px){
+  .atPicto { width: 90%; }
+  .contact { font-size: 0.85em; }
+}
+@media (max-width: 700px){
+  .atPicto { width: 110%; }
+}
+@media (max-width: 510px){
+  .atPicto { width: 140%; }
+}
+@media (max-width: 420px){
+  .atPicto { width: 130%; }
+  .contact { font-size: 0.8em; }
+}
 </style>

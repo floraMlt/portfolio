@@ -41,6 +41,7 @@ export default {
   },
   mounted() {
     this.getCategory()
+    this.$parent.onResize()
   },
   computed: { // relance fonction que quand il y a une action de l'utilisateur
     selectProject : function() {
@@ -131,7 +132,6 @@ export default {
   margin-top: 120px;
   margin-bottom: 120px;
   background-color:#ffffff78;
-  /*border: 1.5px solid rgba(255, 255, 255, 1);*/
 }
 .contactIcon {
   position: absolute;
@@ -168,18 +168,51 @@ export default {
   display: flex;
   justify-content: center;
   align-content: flex-start;
+  flex-flow: row wrap;
   width: 71%;
   z-index: 7;
 }
 .pages {
   font-size: 0.9em;
-  margin: -2% 0% 2% 1%;
+  margin: -2% 0% 3% 1%;
   padding: 0.8% 1%;
   color: white;
   height: fit-content;
   background-color:  #C1272D;
   border-radius: 5px;
   text-align: center;
+}
+.footer { display: none; }
+
+/* RESPONSIVE */
+@media (max-width: 1222px){
+  .scroll { 
+    margin-top: 63px; 
+    max-height: calc(100vh - 200px);
+  }
+}
+@media (max-width: 900px){
+  #contentProjects { width: 80%; }
+  #deco1 { width: 3.5vw; }
+  #deco2 { width: 8vw; }
+  #titleProjects { font-size: 2.5em; top: 32px; }
+}
+@media (max-width: 628px){
+  .scroll { 
+    margin-top: 78px; 
+    max-height: calc(100vh - 220px);
+  }
+  .pages { font-size: 0.85em; }
+  #deco1 { width: 4.1vw; }
+  #deco2 { width: 9vw; }
+  #titleProjects { font-size: 2.4em; top: 55px; }
+  #navigation { width: 88%; }
+}
+@media (max-width: 376px){
+  .scroll {
+    margin-top: 94px; 
+    max-height: calc(100vh - 215px);
+  }
 }
 </style>
 
