@@ -62,7 +62,7 @@ export default {
   align-items: center;
 }
 .cache {
-  background-color: #1b155f;
+  background-color: #080459;
   position: absolute;
   top: -32px;
   width: 4vw;

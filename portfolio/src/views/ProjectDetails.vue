@@ -15,7 +15,7 @@
           <ButtonSeeProject id="seeProject" :linkP="this.currentProjectData.link"/>
         </div>
         <Modal ref="modal" :imgSrc="this.currentImgSrc" class="modalImg"/>
-        <img id="mainImg" :alt="this.currentProjectData.title" :src="this.currentProjectData.img">
+        <img id="mainImg" :alt="this.currentProjectData.title" :src="this.currentProjectData.img" @click="toggleModal(currentProjectData.img)">
       </div>
       <div v-if="this.currentProjectData.otherImg[0]" class="mosaicImg">
         <i id="left" class="angle left icon fleche" v-on:click="hideLeft" v-if="this.first > 0"></i>

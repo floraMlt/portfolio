@@ -6,7 +6,13 @@
     </div>
     <div class="content">
       <h2 class="title">A propos de moi</h2>
-      <p class="txt">Je cherche un stage de 6 mois à partir d'avril 2020</p>
+      <p class="txt">Etudiante en dernière année à l'école d'ingénieur IMAC, spécialisée dans le domaine du <span class="bold">multimédia</span>, 
+        je suis aujourd'hui à la recherche<span class="bold"> d'un stage de 6 mois </span> tant que développeuse web (front, back ou fullstack). 
+        Grâce à mes formations j'ai autant appris à programmer (web, C++, java) qu'à concevoir 
+        des <span class="bold">contenus riches et créatifs </span> des supports variés (print, web, installation interactive, etc.).
+        La <span class="bold">polyvalence</span> est quelque chose de très important pour moi, elle me permet de créer des travaux originaux 
+        en encore de communiquer et travailler avec des équipes artistiques ou techniques.
+        <span class="bold">Pour plus d'informations, n'hésitez pas à me contacter !</span></p>
       <div @click="toggleModal" class="zoomCv"><p>Mon CV</p></div>
       <ModalCV ref="modalCv"/>
       <img id="meB" alt="dessin" src="@/assets/img/deco/meBlc.png">
@@ -28,7 +34,7 @@ export default {
   },
   data(){
     return {
-      cvLink: require("@/assets/img/cv.jpg")
+      cvLink: require("@/assets/img/cvNew.jpg")
     }
   },
   methods: {
@@ -63,7 +69,10 @@ export default {
 }
 .txt {
   font-family: 'Roboto';
-  font-size: 1.2em;
+  font-weight: lighter;
+  font-size: 1.05em;
+  text-align: center;
+  width: 60%;
 }
 .modalCv {
   height: 10% !important;
@@ -71,7 +80,7 @@ export default {
 .zoomCv {
   border: #C1272D 0.5px solid;
   border-radius: 18px;
-  font-size: 1.2em;
+  font-size: 1.1em;
   padding: 1% 2%;
 }
 .contactIcon {
@@ -96,6 +105,10 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-right: 20%;
+}
+.bold {
+  font-weight: bolder;
 }
 #meB {
   position: absolute;
@@ -118,28 +131,29 @@ export default {
 @media (max-width: 870px){
   .icons { width: 28%; }
   #meB { width: 29%; left: 65%; }
-  .content { margin-bottom: 12%; }
+  .content { margin-bottom: 9%; }
+  .txt { font-size: 1em; }
 }
 @media (max-width: 680px){
   .contactIcon { margin-left: 18%; }
   .homeIcon { margin-left: 10%; }
-  #meB { width: 35%; left: 60%; }
-  .content { margin-bottom: 27%; }
+  #meB { width: 33%; left: 62%; bottom: 12px; }
+  .content { margin-bottom: 4%; }
 }
 @media (max-width: 550px){
   .contactIcon { margin-left: 25%; }
   .homeIcon { margin-left: 15%; }
-  #meB { width: 40%; left: 55%; }
-  .content { margin-bottom: 32%; }
+  #meB { width: 27%; left: 66%; }
+  .content { margin-bottom: 10%; margin-right: 0%; }
 }
 @media (max-width: 440px){
   .icons { width: 32%; }
   .contactIcon { margin-left: 35%; }
   .homeIcon { margin-left: 25%; }
-  #meB { width: 50%; left: 20%; }
-  .title { font-size: 2.6em; }
-  .txt { font-size: 1em; text-align: center; }
+  #meB { width: 39%; left: 27%; }
+  .title { font-size: 2.2em; }
+  .txt { font-size: 0.92em; text-align: center; width: 85%; }
   .zoomCv { font-size: 1em; }
-  .content { margin-bottom: 45%; width: 80%; }
+  .content { margin-bottom: 31%; width: 95%; }
 }
 </style>

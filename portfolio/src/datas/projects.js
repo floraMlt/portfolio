@@ -21,7 +21,7 @@ const projects =
       date: "Mars 2017",
       link: "",
       otherImg: [require("@/assets/img/projetIllus/cadences2.jpg"), require("@/assets/img/projetIllus/cadences3.jpg"), require("@/assets/img/projetIllus/cadences4.jpg")],
-      text: "Le festival Cadences est un festival de danse qui se déroule à Arcachon. Ce festival dure 4 jours et se passe un peu partout dans la ville. Ce festival parle de tous les types de danse, pour tout public. Afin de communiquer cet évènement, la ville d’Arcachon a besoin de flyers et d’affiches. J'ai réalisé ce travail pour un cours de BTS Design Graphique, avec Illustrator, Photoshop."
+      text: "Le festival Cadences est un festival de danse qui se déroule à Arcachon. Ce festival dure 4 jours et se passe un peu partout dans la ville. Ce festival parle de tous les types de danse, pour tout public. Afin de communiquer cet évènement, la ville d’Arcachon a besoin de flyers et d’affiches. J'ai réalisé ce travail (projet fictif) pour un cours de BTS Design Graphique, avec Illustrator, Photoshop."
     },
     {
       routerTitle: "Boulangerie",
@@ -32,7 +32,7 @@ const projects =
       date: "Juillet 2017",
       link: "",
       otherImg: [],
-      text: "Réalisation de l'identité visuelle et des supports de communication pour une boulangerie. A travers cette identité, la boulangerie souhaitait retranscrire les valeurs de Qualité et Humanité, que l'on retrouve dans leur travail. J'ai réalisé ce projet sur Illustrator et InDesign."
+      text: "Réalisation de l'identité visuelle et des supports de communication pour une boulangerie. A travers cette identité, la boulangerie souhaitait retranscrire les valeurs de Qualité et Humanité, que l'on retrouve dans les produits proposés. J'ai réalisé ce projet sur Illustrator et InDesign."
     },
     {
       routerTitle: "Causette",
@@ -43,7 +43,7 @@ const projects =
       date: "Décembre 2016",
       link: "",
       otherImg: [require("@/assets/img/projetIllus/causette2.jpg")],
-      text: "Exercice de mise en page et illustration d'un article que proposerait le magazine Causette. Il a tout d'abord fallu déterminer la grille du magazine afin de pouvoir faire l'édition de l'article collant le mieux possible à l'identité du magazine. Projet réalisé dans le cadre du cours d'édition en BTS Design Graphique, avec Illustrator, Photoshop et InDesign."
+      text: "Exercice de mise en page et illustration d'un article que proposerait le magazine Causette. Après avoir analysé et déterminé la grille du mazagine, j'ai réalisé la mise en page et les illsutrations. Tout ceci dans le but de rester la plus fidèle possible à l'identité graphique du magazine. Projet réalisé dans le cadre du cours d'édition en BTS Design Graphique, avec Illustrator, Photoshop et InDesign."
     },
     {
       routerTitle: "NeonDemon",
@@ -54,7 +54,7 @@ const projects =
       date: "Novembre 2018",
       link: "",
       otherImg: [],
-      text: "Affiche inspirée du film The Neon Demon de Nicolas Winding Refn. projet réalisé durant un workshop en direction artistique, le travail a été fait à la tablette graphique, sur Photoshop et Illustrator."
+      text: "Affiche inspirée du film The Neon Demon de Nicolas Winding Refn. Projet réalisé durant un workshop en direction artistique, le travail a été fait à la tablette graphique, sur Photoshop et Illustrator."
     },
     {
       routerTitle: "Spottimac",
@@ -63,9 +63,9 @@ const projects =
       resume:"Site web permettant aux étudiants de l'Imac de poster et consulter des contenus de différentes natures.", 
       img: require("@/assets/img/projetIllus/spottimacMain.jpg"),
       date: "Avril-Mai 2019",
-      link: "http://flora-mallet.com/",
+      link: "",
       otherImg: [require("@/assets/img/projetIllus/spottimac2.jpg"), require("@/assets/img/projetIllus/spottimac3.jpg"), require("@/assets/img/projetIllus/spottimac4.jpg"), require("@/assets/img/projetIllus/spottimac5.jpg")],
-      text: "Site web réalisé pour un projet d’étude. Ce site permet aux étudiants de poster des contenus de différentes natures (cours, loisirs, etc.), de consulter ces contenus et de réagir dessus. Réalisation de la partie Front. Site réalisé pour un projet d'étude, en html, css pour le front-end, php et mySql pour le back-end."
+      text: "Site web réalisé pour un projet d’étude. Ce site permet aux étudiants de poster des contenus de différentes natures (cours, loisirs, etc.), de consulter ces contenus et de réagir à ceux-ci. Réalisation de la partie Front. Site réalisé pour un projet d'étude, en html, css pour le front-end, php et mySql pour le back-end."
     },
     {
       routerTitle: "ExpressionsNous",
@@ -85,9 +85,9 @@ const projects =
       resume:"Dashboard présentant des données récupérées d'une API sur la thématique des arbres à Paris.", 
       img: require("@/assets/img/projetIllus/dashboardMain.jpg"),
       date: "Avril 2020",
-      link: "http://flora-mallet.com/",
+      link: "",
       otherImg: [require("@/assets/img/projetIllus/dashboard2.jpg"), require("@/assets/img/projetIllus/dashboard3.jpg"), require("@/assets/img/projetIllus/dashboard4.jpg")],
-      text: "Dashboard réalisé pour un projet d'étude. L'API 'Les arbres à Paris' a été utilisée afin de réunir les informations retranscrites sur le dashboard. Projet réalisé dans le cadre du cours de programmation web, avec du html, css et le framework javascript HyperApp."
+      text: "Dashboard réalisé pour un projet d'étude. L'API 'Les arbres à Paris' a été utilisée afin de réunir les informations retranscrites sur le dashboard. Projet réalisé dans le cadre du cours de programmation web, en HTML, CSS et avec le framework javascript HyperApp."
     },
     {
       routerTitle: "RecettesAGogo",
@@ -96,9 +96,9 @@ const projects =
       resume:"Site web permettant le stockage et le visionnage de recettes.", 
       img: require("@/assets/img/projetIllus/recettesMain.jpg"),
       date: "Septembre-Octobre 2020",
-      link: "http://flora-mallet.com/",
+      link: "",
       otherImg: [require("@/assets/img/projetIllus/recettes2.jpg"), require("@/assets/img/projetIllus/recettes3.jpg"), require("@/assets/img/projetIllus/recettes4.jpg")],
-      text: "Site d'édition et de consultation de recettes de cuisine. Il implémente la fonctionnalité de création de compte utilisateur, ainsi que de création, consultation ou modification de recettes, ou encore l'implémentation de divers outils comme par exemple une liste de course. Site réalisé pour un projet personnel avec VueJs pour le front-end et NodeJs couplé à MongoDB pour le back-end."
+      text: "Site d'édition et de consultation de recettes de cuisine. Il implémente la fonctionnalité de création de compte utilisateur, ainsi que de création, consultation ou modification de recettes, ou encore l'implémentation de divers outils comme par exemple une liste de course. Site réalisé pour un projet personnel avec Vue.js pour le front-end et Node.js couplé à MongoDB pour le back-end."
     },
     {
       routerTitle: "LaFolleHistoireDuChocolat",
@@ -107,9 +107,9 @@ const projects =
       resume:"Animation relatant la découverte du cacao.", 
       img: require("@/assets/img/projetIllus/chocolatMain.jpg"),
       date: "Mai 2019",
-      link: "http://flora-mallet.com/",
+      link: "https://vimeo.com/477600681",
       otherImg: [require("@/assets/img/projetIllus/chocolat2.jpg"), require("@/assets/img/projetIllus/chocolat3.jpg"), require("@/assets/img/projetIllus/chocolat4.jpg"), require("@/assets/img/projetIllus/chocolat6.jpg"), require("@/assets/img/projetIllus/chocolat5.jpg")],
-      text: "Animation racontant l’histoire du chocolat, de sa découverte en amérique latine jusqu’à son utilisation aujourd’hui partout dans le monde. Projet réalisé dans le cadre d'un cours de post-production, sur le logiciel After Effects."
+      text: "Animation racontant l’histoire du chocolat, de sa découverte en Amérique latine jusqu’à son utilisation aujourd’hui partout dans le monde. Projet réalisé dans le cadre d'un cours de post-production, sur le logiciel After Effects."
     },
     {
       routerTitle: "Pieuvre",
@@ -118,9 +118,9 @@ const projects =
       resume:"Animation 2D d'une pieuvre prenant son bain.", 
       img: require("@/assets/img/projetIllus/pieuvreMain.jpg"),
       date: "Avril 2019",
-      link: "http://flora-mallet.com/",
+      link: "",
       otherImg: [require("@/assets/img/projetIllus/pieuvre2.jpg"), require("@/assets/img/projetIllus/pieuvre3.jpg"), require("@/assets/img/projetIllus/pieuvre4.jpg")],
-      text: "Projet de mise en application du principe de clé et d'animation déléments pour le cours de post-production. Animation réalisée sur After Effect et illustration sur Illustrator."
+      text: "Projet de mise en application du principe de clé et d'animation d'éléments pour le cours de post-production. Animation réalisée sur After Effects et illustration sur Illustrator."
     },
     {
       routerTitle: "AOneWayTicketToNishiwaga",
@@ -129,9 +129,9 @@ const projects =
       resume:"Réalisation d'un générique (title sequence) sur un film imaginé.", 
       img: require("@/assets/img/projetIllus/nishiwagaMain.jpg"),
       date: "Mai 2020",
-      link: "http://flora-mallet.com/",
+      link: "https://vimeo.com/477591556",
       otherImg: [require("@/assets/img/projetIllus/nishiwaga2.jpg"), require("@/assets/img/projetIllus/nishiwaga5.jpg"), require("@/assets/img/projetIllus/nishiwaga11.jpg"), require("@/assets/img/projetIllus/nishiwaga3.jpg"), require("@/assets/img/projetIllus/nishiwaga7.jpg"), require("@/assets/img/projetIllus/nishiwaga9.jpg")],
-      text: "Réalisation d'un générique de film (title sequence) sur un film imaginé. Ce film raconte l'histoire d'un adolescent, qui en revenant du lycée apprend que son père est mort d'une crise cardiaque. Pour repartir sur les traces de son père, il décide de rendre visite à son oncle qui vit au Japon, dans la campagne. A travers diverses rencontres là-bas, il apprend beaucoup de choses sur lui-même et les valeurs qu'il souhaite défendre. La charte graphique de l'animation rappelle les dessins japonais traditionnels à l'encre. Illustrations réalisées sur Photoshop, animation sur After Effects."
+      text: "Réalisation d'un générique d'entrée (title sequence) d'un film de fiction. Générique d'entrée (title sequence) d'un film de fiction. Ce Film traite de l'histoire de Tom, un adolescent de 17 ans, qui après la mort de son père décide de tout quitter pour rejoindre son oncle habitant un petit village rural du Japon. Là-bas, il y fera des rencontres qui changeront sa vision du monde et le sens de sa vie. La charte graphique de l'animation rappelle les dessins japonais traditionnels à l'encre. Illustrations réalisées sur Photoshop, animation sur After Effects."
     },
     {
       routerTitle: "ContreTemps",
@@ -140,7 +140,7 @@ const projects =
       resume:"Court-métrage de 9 minutes sur le thème de l'attente.", 
       img: require("@/assets/img/projetIllus/contretempsMain.jpg"),
       date: "Octobre-Novembre 2019",
-      link: "http://flora-mallet.com/",
+      link: "",
       otherImg: [require("@/assets/img/projetIllus/contretemps6.jpg"), require("@/assets/img/projetIllus/contretemps9.jpg"), require("@/assets/img/projetIllus/contretemps8.jpg"), require("@/assets/img/projetIllus/contretemps2.jpg"), require("@/assets/img/projetIllus/contretemps3.jpg"), require("@/assets/img/projetIllus/contretemps4.jpg"), require("@/assets/img/projetIllus/contretemps5.jpg"), require("@/assets/img/projetIllus/contretemps7.jpg")],
       text: "Court-métrage sur le thème de l'attente, projet réalisé avec une équipe de 5 personnes. J’ai été en charge de l’image lors du tournage et j’ai participé au montage image et son."
     },
@@ -151,9 +151,9 @@ const projects =
       resume:"Poèmes sonores et musicaux.", 
       img: require("@/assets/img/projetIllus/poemesMain.jpg"),
       date: "Avril 2019",
-      link: "http://flora-mallet.com/",
+      link: "",
       otherImg: [],
-      text: "Projet réalisé dans le cadre du cours de Sound Design. Mélange de musiques et de lecture de poèmes afin de créer une expérience sonore immersive. Travail réalisé sur Protools."
+      text: "Projet réalisé dans le cadre du cours de Sound Design. Ce mélange de musiques et de lectures de poèmes crée une expérience sonore immersive. Travail réalisé sur Protools."
     },
     {
       routerTitle: "Photographie",
@@ -164,7 +164,7 @@ const projects =
       date: "Octobre 2016",
       link: "",
       otherImg: [require("@/assets/img/projetIllus/photo8.jpg"), require("@/assets/img/projetIllus/photo7.jpg"), require("@/assets/img/projetIllus/photo4.jpg"), require("@/assets/img/projetIllus/photo3.jpg"), require("@/assets/img/projetIllus/photo5.jpg"), require("@/assets/img/projetIllus/photo6.jpg"), require("@/assets/img/projetIllus/photo9.jpg"), require("@/assets/img/projetIllus/photo10.jpg")],
-      text: "Série de photographie réalisée pour le cours de photographie en BTS Design Graphique. Photographies prises au Parc Ornithologique du Teich (33)."
+      text: "Série de photographies réalisée pour le cours de photographie en BTS Design Graphique. Photographies prises au Parc Ornithologique du Teich (33)."
     },
     {
       routerTitle: "Dessin",
@@ -175,7 +175,7 @@ const projects =
       date: "2016-2020",
       link: "",
       otherImg: [require("@/assets/img/projetIllus/dessins2.jpg"), require("@/assets/img/projetIllus/dessins4.jpg"), require("@/assets/img/projetIllus/dessins5.jpg"), require("@/assets/img/projetIllus/dessins3.jpg"), require("@/assets/img/projetIllus/dessins6.jpg"), require("@/assets/img/projetIllus/dessins7.jpg")],
-      text: "Série de dessins et illustrations personnels."
+      text: "Série de dessins et illustrations libres."
     },
     {
       routerTitle: "LacherPrise",
@@ -208,7 +208,7 @@ const projects =
       date: "Décembre 2017",
       link: "",
       otherImg: [require("@/assets/img/projetIllus/promenade3.jpg"), require("@/assets/img/projetIllus/promenade4.jpg"), require("@/assets/img/projetIllus/promenade6.jpg"), require("@/assets/img/projetIllus/promenade2.jpg"), require("@/assets/img/projetIllus/promenade5.jpg")],
-      text: "Installation interactive utilisant une kinect comme moyen de captation. A travers différentes photographies que j’ai prises dans le Parc Ornithologique du Teich, sur le Bassin d’Arcachon, le spectateur peut se promener en pleine nature grâce à ses déplacements captés. En restant sur le même endroit pendant quelques secondes, l'utilisateur déclenche des animations qui viennent sur les photos et qui permettant une meilleure immersion. Projet d'étude réalisé sur Processing et utilisant une Kinect360 comme moyen de captation."
+      text: "Installation interactive utilisant une kinect comme moyen de captation. A travers différentes photographies que j’ai prises dans le Parc Ornithologique du Teich, sur le Bassin d’Arcachon, le spectateur peut se promener en pleine nature grâce à ses déplacements captés. En restant sur le même endroit pendant quelques secondes, l'utilisateur déclenche des animations qui viennent sur les photos et qui permettent une meilleure immersion. Projet d'étude réalisé sur Processing et utilisant une Kinect360 comme moyen de captation."
     },
     {
       routerTitle: "MaquetteChampsSurMarne",
@@ -219,7 +219,7 @@ const projects =
       date: "Janvier 2020",
       link: "",
       otherImg: [require("@/assets/img/projetIllus/maquette2.jpg"), require("@/assets/img/projetIllus/maquette4.jpg"), require("@/assets/img/projetIllus/maquette5.jpg"), require("@/assets/img/projetIllus/maquette3.jpg"), require("@/assets/img/projetIllus/maquette6.jpg")],
-      text: "Maquette interactive sous forme d'installation. Cette maquette présente de manière originale et ludique la ville de Champs-sur-Marne(77) à travers des sons et photographies aidant à l'immersion. Projet tutoré réalisé sur Processing, avec une Kinect comme moyen de captation."
+      text: "Maquette interactive sous forme d'installation. Cette maquette présente de manière originale et ludique la ville de Champs-sur-Marne(77) à travers des sons et photographies aidant à l'immersion. Projet tutoré réalisé sur Processing, avec une Kinect 360 comme moyen de captation."
     },
     {
       routerTitle:"ACTogether",
@@ -228,9 +228,9 @@ const projects =
       resume:"Imaginez un dispositif interactif en plein Paris sensibilant au harcèlement de rue.", 
       img: require("@/assets/img/projetIllus/actMain.jpg"),
       date: "Mai 2020",
-      link: "http://flora-mallet.com/",
+      link: "",
       otherImg: [require("@/assets/img/projetIllus/act2.jpg"), require("@/assets/img/projetIllus/act3.jpg"), require("@/assets/img/projetIllus/act5.jpg"), require("@/assets/img/projetIllus/act4.jpg")],
-      text: "Installation interactive traitant d'un sujet d'actualité : le harcèlement de rue. ACTogether est un dispositif qui pourrait être mis en place dans la station de métro Saint-Lazare à Paris et qui permettrait de sensibiliser les passagers à ce qu'est le harcèlement de rue et à la vigilance face à ce problème. Une fois à l'intérieur, ils seraient confrontés à une situation virtuelle de harcèlement. Ils peuvent ainsi agir face à cette situation en se plaçant devant l'un des 8 écrans pour faire sortir le harceleur de cet écran. Cependant, le travail n'est pas terminé car le harceleur revient sur un autre écran ! Il faut donc que quelqu'un se mette devant l'un des 8 écrans pour faire partir le harceleur. L'entraide est donc au rendez-vous, et c'est ce que nous voulons faire ressortir de ce travail : ensemble contre le harcèlement de rue. Installation imaginée pour le cours d'interactivité en IMAC. Maquette 3D réalisée avec la librairie p5.js."
+      text: "Installation interactive traitant d'un sujet d'actualité : le harcèlement de rue. ACTogether est un dispositif qui pourrait être mis en place dans la station de métro Saint-Lazare à Paris et qui permettrait de sensibiliser les passagers à ce qu'est le harcèlement de rue. Une fois à l'intérieur, ils seraient confrontés à une situation virtuelle de harcèlement. Ils peuvent ainsi agir face à cette situation en se plaçant devant l'un des 8 écrans pour faire sortir le harceleur de cet écran. Cependant, le travail n'est pas terminé car le harceleur revient sur un autre écran ! Il faut donc que quelqu'un se mette devant l'un des 8 écrans pour faire partir le harceleur. L'entraide est donc au rendez-vous : ensemble contre le harcèlement de rue. Installation imaginée pour le cours d'interactivité en IMAC. Maquette 3D réalisée avec la librairie p5.js."
     },
     {
       routerTitle: "AtlantisWay",
@@ -239,7 +239,7 @@ const projects =
       resume:"Environnement 3D sous-marin, accompagné d'une animation de présentation.", 
       img: require("@/assets/img/projetIllus/atlantisMain.jpg"),
       date: "Décembre 2019",
-      link: "http://flora-mallet.com/",
+      link: "https://vimeo.com/477592377",
       otherImg: [require("@/assets/img/projetIllus/atlantis3.jpg"), require("@/assets/img/projetIllus/atlantis4.jpg"), require("@/assets/img/projetIllus/atlantis2.jpg"), require("@/assets/img/projetIllus/atlantis5.jpg"), require("@/assets/img/projetIllus/atlantis7.jpg")],
       text: "Environnement 3D sous-marin. Une animation accompagne cet environnement, créant une histoire autour de ce lieu imaginaire. Cette animation met en avant un plongeur, nageant dans un fond sous-marin et découvrant des ruines antiques. Projet réalisé sur Blender."
     },
@@ -255,7 +255,7 @@ const projects =
       text: "Travail réalisé durant le cours de Modélisation 3D. Projet réalisé avec Blender."
     },
     {
-      routerTitle: "AnARTmorphose",
+      routerTitle: "AnARTmorphoses",
       title:"AnARTmorphoses", 
       categories: ["Projet3D"],
       resume:"Musée semi-imaginaire en 3D exposant des oeuvres d'art revisitées sous forme d'anamorphoses.", 
@@ -274,13 +274,13 @@ const projects =
       date: "Avril-Juin 2019",
       link: "",
       otherImg: [require("@/assets/img/projetIllus/tower2.jpg"), require("@/assets/img/projetIllus/tower4.jpg"), require("@/assets/img/projetIllus/tower3.jpg")],
-      text: "Jeu de tower défense réalisé en C, avec OpenGL 2. Jeu réalisé dans le cadre du cours de Synthèse d'images en IMAC."
+      text: "Jeu de tower défense réalisé en C, avec OpenGL 2. Jeu réalisé dans le cadre du cours de Synthèse d'image en IMAC."
     },
     {
       routerTitle: "WorldImaker",
       title:"WorldImaker", 
       categories: ["Développement"],
-      resume:"Editeur/visualiseur de terrain et objets 3D à base de cube. Reéalisé en C++ et OpenGL3", 
+      resume:"Editeur/visualiseur de terrain et objets 3D à base de cube. Réalisé en C++ et OpenGL3", 
       img: require("@/assets/img/projetIllus/minecraftMain.jpg"),
       date: "Novembre-Décembre 2019",
       link: "",

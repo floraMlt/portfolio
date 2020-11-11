@@ -7,8 +7,8 @@
         </div>
         <div id="txtButton">
             <p id="txt">
-                Etudiante à l'école d'ingénieurs IMAC (Image Multimédia Audiovisuel Communication). Communication visuelle, Programmation, Web design, Web
-                développement, Design graphique print et numérique, Installations interactives, Jeux-vidéos. <br> <br>Prêt.e.s à découvrir mon univers ?
+                Bonjour ! Je m'appelle Flora et je suis actuellement en dernière année à l'école d'ingénieur IMAC (Image Multimédia Audiovisuel Communication) afin de devenir <span class="bold">Ingénieure Créative !</span> Je suis passionnée par  
+                le multimédia et tout particulièrement par le web, qui me permet de mêler programmation et créativité. <span class="bold">Je cherche un stage de 6 mois en tant que développeuse web (front, back, fullstack) à partir d'avril 2021. </span><br> <br>Prêt.e.s à découvrir mon univers ?
             </p>
             <Button id="buttonGo"/>
         </div>
@@ -86,6 +86,10 @@ h1 {
   margin-left: 2%;
   margin-right: 10%;
   margin-bottom:40px;
+}
+.bold {
+  font-weight: bolder;
+  color: #1b1464;
 }
 
 /* RESPONSIVE */

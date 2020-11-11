@@ -97,7 +97,7 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: #1b155f;
+  background-color: #080459;
   width: 100%;
   height: 100%;
 }
