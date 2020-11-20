@@ -6,8 +6,8 @@
     </router-link>
     <img id="deco1" alt="deco" src="@/assets/img/deco/lines5.png">
     <img id="deco2" alt="deco" src="@/assets/img/deco/lines.png">
-    <div id="content">
-      <div id="contentTop">
+    <div id="content" :class="this.currentImgClass">
+      <div class="contentTop">
         <div id="txt">
           <h1> {{this.currentProjectData.title}} </h1>
           <p class="txtContent">{{this.currentProjectData.text}}</p>
@@ -53,6 +53,10 @@ export default {
       this.currentImgSrc = srcImg
       this.$refs.modal.toggle()
     },
+    setClassImgs() {
+      if (this.isThereMosaic) { this.currentImgClass = "contentPage" }
+      else { this.currentImgClass = "noMosaic" }
+    },
     verifProject(){
       if(projetsIndex[this.$route.params.titleP] == undefined) {
         this.$router.push({name:'Home'})
@@ -66,7 +70,9 @@ export default {
       currentProjectData: null,
       first: 0,
       last: 2,
-      currentImgSrc: null
+      currentImgSrc: null,
+      isThereMosaic: true,
+      currentImgClass: "mosaicImg"
     }
   },
   components: {
@@ -74,7 +80,10 @@ export default {
     ButtonSeeProject
   },
   mounted() {
-    this.$parent.onResize()
+    this.$parent.onResize();
+    if(this.currentProjectData.otherImg.length == 0) { this.isThereMosaic = false; }
+    else { this.isThereMosaic = true; }
+    this.setClassImgs();
   }
 }
 </script>
@@ -92,7 +101,7 @@ h1{
 }
 .fleche {
   position: absolute;
-  top: 125px;
+  top: 140px;
   transform: translateY(-50%);
   font-size: 1.7em;
   color: #1B1464;
@@ -116,14 +125,24 @@ h1{
   margin-top: 15px;
   position: relative;
 }
+.contentPage {
+  margin-top: 0;
+}
+.noMosaic {
+  margin-top: 160px;
+}
 .images{
   width: 22%;
+  height: auto;
   margin: 1%;
-  border: 1px solid rgba(177, 177, 177, 0.692);
   border-radius: 10px;
+  box-shadow: 1px 1px 8px rgba(40,0,71, 0.5);
 }
 .txtContent {
   font-size: 0.95em;
+}
+.txtRetour {
+  margin-top: 0;
 }
 .footer {
   padding: 2% 0;
@@ -160,6 +179,7 @@ h1{
   max-width: 100%;
   max-height: 100%;
   width: 38%;
+  height: auto;
   border-radius: 8px;
   margin-left: 1.5%;
   margin-right: 1%;
@@ -175,7 +195,7 @@ h1{
   font-family: "Roboto";
   font-weight: lighter;
 }
-#contentTop {
+.contentTop {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -187,12 +207,19 @@ h1{
   align-self: center;
 }
 
+.images:hover {
+  cursor: zoom-in;
+}
+#mainImg:hover {
+  cursor: zoom-in;
+} 
+
 /* RESPONSIVE*/
 @media (max-width: 1300px){
   .fleche { top: 52%; }
 }
 @media (max-width: 1000px){
-  #contentTop{ flex-direction: column-reverse; }
+  .contentTop{ flex-direction: column-reverse; }
   #txt {  width: 60%; text-align: center; }
   #mainImg { margin: 30px 0 20px 0; width: 45%; }
   #right { right: 8%; top: 56%; }
@@ -201,28 +228,28 @@ h1{
   .hidden { display:inline; }
   .fleche { display: none; }
   .images{ width: 35%; }
-  .mosaicImg { margin-top: 0px; }
+  .mosaicImg { margin-top: 10px; }
+  .noMosaic { margin-top: 50px; }
 }
 @media (max-width: 800px){
-  .txtRetour { font-size: smaller; }
+  .txtRetour { font-size: smaller; margin-top: 5px;}
   #retour { flex-direction: column; align-items: center; top: 16px; left: 3%;}
   #mainImg { width: 60%; }
 }
 @media (max-width: 550px){
   h1 { font-size: 2.4em; }
-  .images{ width: 70%; }
+  .images{ width: 84%; }
   .txtRetour { display: none; }
   .txtContent { font-size: 0.95em; }
   #deco1 { display: none; }
   #deco2 { display: none; }
-  #mainImg { width: 60%; margin: 10px 0 10px 0;}
+  #mainImg { width: 84%; margin: 10px 0 10px 0; }
   #retour { align-items: flex-start; }
   #txt { width: 73%; }
 }
 @media (max-width: 450px){
   h1 { font-size: 2.3em; }
-  .txtContent { font-size: 0.9em; }
-  #mainImg { width: 70%; }
-  #txt { width: 78%; }
+  .images{ margin-bottom: 15px; }
+  #txt { width: 78%; margin-bottom: 18px; }
 }
 </style>

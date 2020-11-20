@@ -87,7 +87,7 @@ export default {
   }
   #me {
     width: 42vw;
-    margin-bottom: 53px;
+    margin-bottom: 26px;
     margin-right: 25%;
   }
 }

@@ -23,7 +23,7 @@ const projectsIndex =
     ACTogether: 20,
     AtlantisWay: 21,
     Wireframe: 22,
-    AnARTmorphose: 23,
+    AnARTmorphoses: 23,
     TowerDefense: 24,
     WorldImaker: 25
 }

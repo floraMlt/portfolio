@@ -7,21 +7,21 @@
       <div id="contentProjects">
           <div id="navigation">
             <!--<CategoryBar/>-->
-            <div class="pages" @click="changeCategory('All')">All</div>
-            <div class="pages" @click="changeCategory('Web')">Web</div>
-            <div class="pages" @click="changeCategory('Graphisme')">Graphisme</div>
-            <div class="pages" @click="changeCategory('Animation')">Animation</div>
-            <div class="pages" @click="changeCategory('Illustration')">Illustration</div>
-            <div class="pages" @click="changeCategory('InstallationInteractive')">Installation interactive</div>
-            <div class="pages" @click="changeCategory('Projet3D')">3D</div>
-            <div class="pages" @click="changeCategory('Audiovisuel')">Audiovisuel</div>
-            <div class="pages" @click="changeCategory('Développement')">Développement et jeux-vidéos</div>
+            <div class="pages" :class="{ activeCat: this.catSelected == 'All' }" @click="changeCategory('All')">All</div>
+            <div class="pages" :class="{ activeCat: this.catSelected == 'Web' }" @click="changeCategory('Web')">Web</div>
+            <div class="pages" :class="{ activeCat: this.catSelected == 'Graphisme' }" @click="changeCategory('Graphisme')">Graphisme</div>
+            <div class="pages" :class="{ activeCat: this.catSelected == 'Animation' }" @click="changeCategory('Animation')">Animation</div>
+            <div class="pages" :class="{ activeCat: this.catSelected == 'Illustration' }" @click="changeCategory('Illustration')">Illustration</div>
+            <div class="pages" :class="{ activeCat: this.catSelected == 'Interactivé' }" @click="changeCategory('Interactivé')">Interactivé</div>
+            <div class="pages" :class="{ activeCat: this.catSelected == 'Projet3D' }" @click="changeCategory('Projet3D')">3D</div>
+            <div class="pages" :class="{ activeCat: this.catSelected == 'Audiovisuel' }" @click="changeCategory('Audiovisuel')">Audiovisuel</div>
+            <div class="pages" :class="{ activeCat: this.catSelected == 'Programmation 3D' }" @click="changeCategory('Programmation 3D')">Programmation 3D</div>
           </div>
-        <!-- on peut éviter de mettre le v-for sur un div et le mettre direct sur projectItem, voir si ça casse pas mon css-->
-        <!--<ProjectItem :title="project.title" :img="project.img" :resume="project.resume" :categories="project.categories"/>-->
-        <div class="scroll">
+          <div id="gradientCache"></div>
+        <div class="scroll" ref="scrollContener">
           <ProjectItem class="listProjects" v-for="project in selectProject" :key="project.title" :projet="project"/>
         </div>
+        <!--<div id="gradientCache2"></div>-->
       </div>
   </div>
 </template>
@@ -41,6 +41,7 @@ export default {
   },
   mounted() {
     this.getCategory()
+    this.catSelected = this.currentCategory
     this.$parent.onResize()
   },
   computed: { // relance fonction que quand il y a une action de l'utilisateur
@@ -50,8 +51,10 @@ export default {
   },
   methods : {
     changeCategory(categorie) {
-        this.$router.replace('/projects/' + categorie)
-        this.getCategory()
+      this.$refs.scrollContener.scrollTop = 0
+      this.$router.replace('/projects/' + categorie)
+      this.getCategory()
+      this.catSelected = this.currentCategory
     },
     getCategory(){
       if(this.$route.params.catName == 'Illustration'
@@ -59,9 +62,9 @@ export default {
         || this.$route.params.catName == 'Audiovisuel'
         || this.$route.params.catName == 'Web'
         || this.$route.params.catName == 'Animation'
-        || this.$route.params.catName == 'InstallationInteractive'
+        || this.$route.params.catName == 'Interactivé'
         || this.$route.params.catName == 'Projet3D'
-        || this.$route.params.catName == 'Développement'
+        || this.$route.params.catName == 'Programmation 3D'
         || this.$route.params.catName == 'All'
       ){
         this.currentCategory = this.$route.params.catName
@@ -77,7 +80,8 @@ export default {
     data() {
       return {
         currentCategory: "All",
-        projects : projectData
+        projects : projectData,
+        catSelected : this.getCategory()
     }
   }
 }
@@ -133,6 +137,22 @@ export default {
   margin-bottom: 120px;
   background-color:#ffffff78;
 }
+#gradientCache {
+  position: fixed;
+  width: 62%;
+  height: 9px;
+  top: 158px;
+  z-index: 4;
+  background: linear-gradient(#7C7AA7, rgba(0,0,0,0));
+}
+/*#gradientCache2 {
+  position: fixed;
+  width: 62%;
+  height: 9px;
+  top: 692.5px;
+  z-index: 4;
+  background: linear-gradient( rgba(0,0,0,0), #7C7AA7);
+}*/
 .contactIcon {
   position: absolute;
   left: 6.2%;
@@ -149,7 +169,7 @@ export default {
   top: 4%;
 }
 .listProjects {
-  margin: 10px 3%;
+  margin: 5px 3% 20px 3%;
   position: relative;
   z-index: 2;
 }
@@ -181,8 +201,16 @@ export default {
   background-color:  #C1272D;
   border-radius: 5px;
   text-align: center;
+  transition: padding 0.5s;
+}
+.activeCat {
+  /*background-color: #950005 !important;*/
+  box-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);
 }
 .footer { display: none; }
+.pages:hover {
+  padding: 1% 1.2%;
+}
 
 /* RESPONSIVE */
 @media (max-width: 1222px){
@@ -190,12 +218,19 @@ export default {
     margin-top: 63px; 
     max-height: calc(100vh - 200px);
   }
+  #gradientCache { top: 182px; }
+  /*#gradientCache2 { top: 696.5px; }*/
+}
+@media (max-width: 980px){
+  /*#gradientCache2 { top: 696.2px; width: 60%;}*/
 }
 @media (max-width: 900px){
   #contentProjects { width: 80%; }
   #deco1 { width: 3.5vw; }
   #deco2 { width: 8vw; }
   #titleProjects { font-size: 2.5em; top: 32px; }
+  #gradientCache { width: 75%; }
+  /*#gradientCache2 { width: 75%;}*/
 }
 @media (max-width: 628px){
   .scroll { 
@@ -207,11 +242,17 @@ export default {
   #deco2 { width: 9vw; }
   #titleProjects { font-size: 2.4em; top: 55px; }
   #navigation { width: 88%; }
+  #gradientCache { top: 198px; }
+  /*#gradientCache2 { top: 691.5px; }*/
 }
 @media (max-width: 376px){
+  #titleProjects { top: 37px; }
+  #contentProjects { margin-top: 100px; }
+  #gradientCache { top: 194px; }
+  /*#gradientCache2 { top: 672.5px; width: 69%; }*/
   .scroll {
     margin-top: 94px; 
-    max-height: calc(100vh - 215px);
+    max-height: calc(100vh - 235px);
   }
 }
 </style>

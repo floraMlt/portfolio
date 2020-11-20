@@ -54,15 +54,23 @@ body {
   margin: 0;
 }
 body, html {
-  height: 100%;
+  /*height: 100%;
   width: 100%;
   min-height: 100%;
-  min-width: 100%;
+  min-width: 100%;*/
+  width: 100vw;
+  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
 }
 #app {
-  height: 100%;
+  /*height: 100%;
   width: 100%;
   min-height: 100%;
-  min-width: 100%;
+  min-width: 100%;*/
+  width: 100vw;
+  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
 }
 </style>

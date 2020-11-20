@@ -52,7 +52,7 @@ export default {
     right: -2px !important;
   }
   .ui.modal {
-    width: 66% !important;
+    width: 85% !important;
   }
 }
 @media (max-width: 650px){
@@ -62,7 +62,7 @@ export default {
     font-size: 1em;
   }
   .ui.modal {
-    width: 75% !important;
+    width: 90% !important;
   }
 }
 </style>

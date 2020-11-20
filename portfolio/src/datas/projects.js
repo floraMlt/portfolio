@@ -65,7 +65,7 @@ const projects =
       date: "Avril-Mai 2019",
       link: "",
       otherImg: [require("@/assets/img/projetIllus/spottimac2.jpg"), require("@/assets/img/projetIllus/spottimac3.jpg"), require("@/assets/img/projetIllus/spottimac4.jpg"), require("@/assets/img/projetIllus/spottimac5.jpg")],
-      text: "Site web réalisé pour un projet d’étude. Ce site permet aux étudiants de poster des contenus de différentes natures (cours, loisirs, etc.), de consulter ces contenus et de réagir à ceux-ci. Réalisation de la partie Front. Site réalisé pour un projet d'étude, en html, css pour le front-end, php et mySql pour le back-end."
+      text: "Site web réalisé pour un projet d’étude. Ce site permet aux étudiants de poster des contenus de différentes natures (cours, loisirs, etc.), de consulter ces contenus et de réagir à ceux-ci. Site réalisé pour un projet d'étude, en html, css pour le front-end, php et mySql pour le back-end."
     },
     {
       routerTitle: "ExpressionsNous",
@@ -140,7 +140,7 @@ const projects =
       resume:"Court-métrage de 9 minutes sur le thème de l'attente.", 
       img: require("@/assets/img/projetIllus/contretempsMain.jpg"),
       date: "Octobre-Novembre 2019",
-      link: "",
+      link: "https://www.youtube.com/watch?v=d41-IxLGGIA&t=6s&ab_channel=LibertaFilms",
       otherImg: [require("@/assets/img/projetIllus/contretemps6.jpg"), require("@/assets/img/projetIllus/contretemps9.jpg"), require("@/assets/img/projetIllus/contretemps8.jpg"), require("@/assets/img/projetIllus/contretemps2.jpg"), require("@/assets/img/projetIllus/contretemps3.jpg"), require("@/assets/img/projetIllus/contretemps4.jpg"), require("@/assets/img/projetIllus/contretemps5.jpg"), require("@/assets/img/projetIllus/contretemps7.jpg")],
       text: "Court-métrage sur le thème de l'attente, projet réalisé avec une équipe de 5 personnes. J’ai été en charge de l’image lors du tournage et j’ai participé au montage image et son."
     },
@@ -151,7 +151,7 @@ const projects =
       resume:"Poèmes sonores et musicaux.", 
       img: require("@/assets/img/projetIllus/poemesMain.jpg"),
       date: "Avril 2019",
-      link: "",
+      link: "https://soundcloud.com/user-242544305/balade-musicale-poemes-sonores/s-PAO6oJqSs8A",
       otherImg: [],
       text: "Projet réalisé dans le cadre du cours de Sound Design. Ce mélange de musiques et de lectures de poèmes crée une expérience sonore immersive. Travail réalisé sur Protools."
     },
@@ -180,7 +180,7 @@ const projects =
     {
       routerTitle: "LacherPrise",
       title:"Lâcher-prise", 
-      categories: ["InstallationInteractive"],
+      categories: ["Interactivé"],
       resume:"Installation interactive reposant sur l'étude de nouvelles perceptions par le numérique.", 
       img: require("@/assets/img/projetIllus/lpMain.jpg"),
       date: "Janvier-Mars 2018",
@@ -191,7 +191,7 @@ const projects =
     {
       routerTitle: "ElViaje",
       title:"El viaje", 
-      categories:  ["InstallationInteractive", "Illustration"],
+      categories:  ["Interactivé", "Illustration"],
       resume:"Installation interactive présentant un récit d'aventures autour d'un héro.", 
       img: require("@/assets/img/projetIllus/viajeMain.jpg"),
       date: "Avril-Mai 2018",
@@ -202,7 +202,7 @@ const projects =
     {
       routerTitle: "UnePromenadeEnPleineNature",
       title:"Une promenade en pleine nature", 
-      categories: ["InstallationInteractive"],
+      categories: ["Interactivé"],
       resume:"Installation interactive immergeant le spectateur en pleine nature.", 
       img: require("@/assets/img/projetIllus/promenadeMain.jpg"),
       date: "Décembre 2017",
@@ -213,7 +213,7 @@ const projects =
     {
       routerTitle: "MaquetteChampsSurMarne",
       title:"Maquette de la ville de Champs-sur-Marne", 
-      categories: ["InstallationInteractive"],
+      categories: ["Interactivé"],
       resume:"Maquette interactive de la ville de Champs-sur-Marne.", 
       img: require("@/assets/img/projetIllus/maquetteMain.jpg"),
       date: "Janvier 2020",
@@ -224,11 +224,11 @@ const projects =
     {
       routerTitle:"ACTogether",
       title:"ACTogether", 
-      categories: ["nstallationInteractive"],
+      categories: ["Interactivé"],
       resume:"Imaginez un dispositif interactif en plein Paris sensibilant au harcèlement de rue.", 
       img: require("@/assets/img/projetIllus/actMain.jpg"),
       date: "Mai 2020",
-      link: "",
+      link: "http://interactivity.ingenus.ovh/",
       otherImg: [require("@/assets/img/projetIllus/act2.jpg"), require("@/assets/img/projetIllus/act3.jpg"), require("@/assets/img/projetIllus/act5.jpg"), require("@/assets/img/projetIllus/act4.jpg")],
       text: "Installation interactive traitant d'un sujet d'actualité : le harcèlement de rue. ACTogether est un dispositif qui pourrait être mis en place dans la station de métro Saint-Lazare à Paris et qui permettrait de sensibiliser les passagers à ce qu'est le harcèlement de rue. Une fois à l'intérieur, ils seraient confrontés à une situation virtuelle de harcèlement. Ils peuvent ainsi agir face à cette situation en se plaçant devant l'un des 8 écrans pour faire sortir le harceleur de cet écran. Cependant, le travail n'est pas terminé car le harceleur revient sur un autre écran ! Il faut donc que quelqu'un se mette devant l'un des 8 écrans pour faire partir le harceleur. L'entraide est donc au rendez-vous : ensemble contre le harcèlement de rue. Installation imaginée pour le cours d'interactivité en IMAC. Maquette 3D réalisée avec la librairie p5.js."
     },
@@ -268,19 +268,19 @@ const projects =
     {
       routerTitle: "TowerDefense",
       title:"Tower defense", 
-      categories: ["Développement"],
-      resume:"Jeux 2D de Tower defense réalisé en C et OpenGL2.", 
+      categories: ["Programmation 3D"],
+      resume:"Jeux 2D de Tower defense réalisé en C et OpenGL.", 
       img: require("@/assets/img/projetIllus/towerMain.jpg"),
       date: "Avril-Juin 2019",
       link: "",
       otherImg: [require("@/assets/img/projetIllus/tower2.jpg"), require("@/assets/img/projetIllus/tower4.jpg"), require("@/assets/img/projetIllus/tower3.jpg")],
-      text: "Jeu de tower défense réalisé en C, avec OpenGL 2. Jeu réalisé dans le cadre du cours de Synthèse d'image en IMAC."
+      text: "Jeu de tower défense réalisé en C, avec OpenGL. Jeu réalisé dans le cadre du cours de Synthèse d'image en IMAC."
     },
     {
       routerTitle: "WorldImaker",
       title:"WorldImaker", 
-      categories: ["Développement"],
-      resume:"Editeur/visualiseur de terrain et objets 3D à base de cube. Réalisé en C++ et OpenGL3", 
+      categories: ["Programmation 3D"],
+      resume:"Editeur/visualiseur de terrain et objets 3D à base de cube. Réalisé en C++ et OpenGL", 
       img: require("@/assets/img/projetIllus/minecraftMain.jpg"),
       date: "Novembre-Décembre 2019",
       link: "",

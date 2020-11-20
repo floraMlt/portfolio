@@ -30,17 +30,6 @@ export default {
   mounted() {
     this.$parent.onResize()
   }
-  /*,
-  methods : {
-    onResize() {
-      document.querySelector('body').style.overflow = "hidden"
-      document.querySelector('html').style.overflow = "hidden"
-      document.querySelector('#app').style.overflow = "hidden"
-    }
-  },
-  mounted() {
-    this.onResize()
-  }*/
 }
 </script>
 
@@ -49,7 +38,7 @@ h1 {
   font-family: "BodoniB";
   font-size: 4em;
   color: #C1272D;
-  width: 320px;
+  width: 330px;
   margin-bottom: 10px;
   display: flex;
   justify-content: flex-end;
@@ -109,7 +98,7 @@ h1 {
   #blocTxt {
     right: 14%;
     width: 800px;
-    top: 86px;
+    top: 40px;
   }
   #buttonGo { margin-left: 64%; }
   #title { margin-right: 0; }
@@ -119,13 +108,13 @@ h1 {
   h1 { font-size: 3.4em; justify-content: flex-start; }
   .point { width: 3.5%; margin-right: 7%; }
   #txt { font-size: 0.95em; }
-  #blocTxt { right: 15%; top: 101px; }
+  #blocTxt { right: 15%; top: 25px; }
 }
 @media (max-width: 508px){
   h1 { font-size: 3.2em; }
   #txt { font-size: 0.91em; }
   #decoButton { font-size: 1.2em; }
-  #blocTxt { right: 12%; top: 101px }
+  #blocTxt { right: 12%; }
   .point { width: 3.2%; margin-right: 0%; }
 }
 @media (max-width: 442px){
@@ -138,7 +127,6 @@ h1 {
 @media (max-width: 385px){
   .point { display: none; }
   #blocTxt {
-    top: 100px;
     left: 16%;
     align-items: flex-start;
     justify-content: initial;

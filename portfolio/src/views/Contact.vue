@@ -64,19 +64,19 @@ export default {
 }
 .title {
   font-family: 'bodoniB';
-  font-size: 2.6em;
+  font-size: 3em;
   margin-bottom: 50px;
   color: #C1272D;
 }
 .ssTitle {
   font-family: 'Roboto';
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-weight: bolder;
   margin-right: 1%;
 }
 .txt {
   font-family: 'Roboto';
-  font-size: 1em;
+  font-size: 1.1em;
 }
 .contactPoint {
   display: flex;
@@ -113,28 +113,23 @@ export default {
   .aboutIcon { margin-left: 11%; }
   .homeIcon { margin-left: 5%; }
   #meB { width: 25%; }
-  .title { font-size: 2.5em; margin-bottom: 35px; }
-  .ssTitle { font-size: 1.1em; }
-  .txt { font-size: 0.9em; }
+  .title { margin-bottom: 35px; }
   .contactPoint { margin: 0 40px; }
-  .content { margin-bottom: 10%; }
+  .content { margin-bottom: 90px; }
 }
 @media (max-width: 870px){
   .icons { width: 28%; }
   #meB { width: 29%; left: 65%; }
-  .content { margin-bottom: 15%; }
 }
 @media (max-width: 680px){
   .aboutIcon { margin-left: 18%; }
   .homeIcon { margin-left: 10%; }
   #meB { width: 35%; left: 60%; }
-  .content { margin-bottom: 20%; }
 }
 @media (max-width: 550px){
   .aboutIcon { margin-left: 25%; }
   .homeIcon { margin-left: 15%; }
   #meB { width: 40%; left: 55%; }
-  .content { margin-bottom: 25%; }
 }
 @media (max-width: 440px){
   .icons { width: 32%; }
@@ -142,9 +137,12 @@ export default {
   .homeIcon { margin-left: 25%; }
   #meB { width: 50%; left: 20%; }
   .title { font-size: 2.4em; margin-bottom: 20px; }
-  .ssTitle { font-size: 1em; }
-  .txt { font-size: 0.8em; text-align: center; }
-  .contactPoint { margin: 0 20px; }
-  .content { margin-bottom: 30%; }
+  .ssTitle { font-size: 1.2em; }
+  .txt { font-size: 1em; text-align: center; }
+  .contactPoint { margin: 15px 20px; }
+}
+@media (max-width: 360px){
+  .contactList { flex-direction: column; }
+  .title { margin-bottom: 5px; }
 }
 </style>
