@@ -25,7 +25,8 @@ const projectsIndex =
     Wireframe: 22,
     AnARTmorphoses: 23,
     TowerDefense: 24,
-    WorldImaker: 25
+    WorldImaker: 25,
+    CatAdoption: 26
 }
 
 export default projectsIndex

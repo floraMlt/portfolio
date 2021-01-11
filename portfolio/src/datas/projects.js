@@ -63,7 +63,7 @@ const projects =
       resume:"Site web permettant aux étudiants de l'Imac de poster et consulter des contenus de différentes natures.", 
       img: require("@/assets/img/projetIllus/spottimacMain.jpg"),
       date: "Avril-Mai 2019",
-      link: "",
+      link: "https://github.com/LafLaurine/imac-php-projet",
       otherImg: [require("@/assets/img/projetIllus/spottimac2.jpg"), require("@/assets/img/projetIllus/spottimac3.jpg"), require("@/assets/img/projetIllus/spottimac4.jpg"), require("@/assets/img/projetIllus/spottimac5.jpg")],
       text: "Site web réalisé pour un projet d’étude. Ce site permet aux étudiants de poster des contenus de différentes natures (cours, loisirs, etc.), de consulter ces contenus et de réagir à ceux-ci. Site réalisé pour un projet d'étude, en html, css pour le front-end, php et mySql pour le back-end."
     },
@@ -85,7 +85,7 @@ const projects =
       resume:"Dashboard présentant des données récupérées d'une API sur la thématique des arbres à Paris.", 
       img: require("@/assets/img/projetIllus/dashboardMain.jpg"),
       date: "Avril 2020",
-      link: "",
+      link: "https://github.com/cleliechassignet/Javascript",
       otherImg: [require("@/assets/img/projetIllus/dashboard2.jpg"), require("@/assets/img/projetIllus/dashboard3.jpg"), require("@/assets/img/projetIllus/dashboard4.jpg")],
       text: "Dashboard réalisé pour un projet d'étude. L'API 'Les arbres à Paris' a été utilisée afin de réunir les informations retranscrites sur le dashboard. Projet réalisé dans le cadre du cours de programmation web, en HTML, CSS et avec le framework javascript HyperApp."
     },
@@ -96,7 +96,7 @@ const projects =
       resume:"Site web permettant le stockage et le visionnage de recettes.", 
       img: require("@/assets/img/projetIllus/recettesMain.jpg"),
       date: "Septembre-Octobre 2020",
-      link: "",
+      link: "https://github.com/floraMlt/recettes-a-gogo",
       otherImg: [require("@/assets/img/projetIllus/recettes2.jpg"), require("@/assets/img/projetIllus/recettes3.jpg"), require("@/assets/img/projetIllus/recettes4.jpg")],
       text: "Site d'édition et de consultation de recettes de cuisine. Il implémente la fonctionnalité de création de compte utilisateur, ainsi que de création, consultation ou modification de recettes, ou encore l'implémentation de divers outils comme par exemple une liste de course. Site réalisé pour un projet personnel avec Vue.js pour le front-end et Node.js couplé à MongoDB pour le back-end."
     },
@@ -286,7 +286,18 @@ const projects =
       link: "",
       otherImg: [require("@/assets/img/projetIllus/minecraft2.jpg"), require("@/assets/img/projetIllus/minecraft3.jpg"), require("@/assets/img/projetIllus/minecraft4.jpg"), require("@/assets/img/projetIllus/minecraft5.jpg")],
       text: "Editeur/visualiseur de terrain et objets 3D à base de cubes réalisé en C++ et avec OpenGl. Cet éditeur permet de créer et enlever des cubes d’une scène, les colorer, ainsi que leur mettre des textures. L’utilisateur peut également sauvegarder et charger une scène, mettre des lumières (directionnelles ou points de lumière) et enfin générer des terrains grâce à des Radial Basis Functions (RBF)."
-    }         
+    },
+    {
+      routerTitle: "CatAdoption",
+      title:"Cat adoption", 
+      categories: ["Web"],
+      resume:"Site web réalisé avec React.js.", 
+      img: require("@/assets/img/projetIllus/catMain.jpg"),
+      date: "Novembre 2020",
+      link: "https://github.com/floraMlt/catAdoption",
+      otherImg: [require("@/assets/img/projetIllus/catOther.jpg"), require("@/assets/img/projetIllus/catOther2.jpg")],
+      text: "Site web réalisé avec React.js. Pour ce site, j'ai récupéré une liste de chatons avec une photo d'eux ainsi que leurs informations en consommant une api, et utilisant une requête GET. Puis, j'ai créé une page avec une gallerie de photos de chatons à adopter. L'utilisateur peut accéder aux informations d'un chaton dans une autre page quand il clique sur sa photo. Avec un bouton 'prendre rendez-vous', qui consomme une autre api en utilisant une requête POST et qui permet de donner à l'utilisateur le lieu, la date et l'heure de rendez-vous pour venir chercher le chaton à adopter."
+    }             
   ]
 
 export default projects
