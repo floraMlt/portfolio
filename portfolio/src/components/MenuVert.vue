@@ -72,7 +72,7 @@ export default {
 }
 #otherIcons {
   position: relative;
-  top: -200px;
+  top: -250px;
   transition: top 1s;
   z-index: 5;
 }

@@ -56,30 +56,37 @@ body {
   margin: 0;
 }
 body, html {
-  /*height: 100%;
-  width: 100%;
-  min-height: 100%;
-  min-width: 100%;*/
   width: 100vw;
   height: 100vh;
   min-width: 100vw;
   min-height: 100vh;
 }
 #app {
-  /*height: 100%;
-  width: 100%;
-  min-height: 100%;
-  min-width: 100%;*/
   width: 100vw;
   height: 100vh;
   min-width: 100vw;
   min-height: 100vh;
 }
-.fade-enter, .fade-leave-to{
-  transition: translateX(3em);
-  opacity: 0;
+
+.fade-enter-active, .fade-leave-active {
+  transition-property: opacity;
+  transition-duration: .3s;
 }
+
+.fade-leave-active {
+  transition-delay: .3s;
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}
+
+/*
 .fade-enter-active, .fade-leave-active{
   transition: all .3s ease;
 }
+.fade-enter, .fade-leave-to{
+  opacity: 0;
+}*/
+
 </style>

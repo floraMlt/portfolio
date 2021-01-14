@@ -1,5 +1,5 @@
 <template>
-  <div class="images">
+  <div class="images">  
     <img id="lines" src="../assets/img/deco/lines.png" alt="illustration2">
     <img id="me" src="../assets/img/deco/meNew.png" alt="illustration de Flora Mallet">
     <img id="linesB" src="../assets/img/deco/lines7.png" alt="illustration3">

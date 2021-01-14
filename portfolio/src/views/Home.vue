@@ -3,7 +3,34 @@
       <div id="blocTxt">
         <div id="title">
           <h1>Flora Mallet</h1>
-          <img class="point" src="../assets/img/deco/point.png" alt="point bleu">
+          <!--<img class="point" src="../assets/img/deco/point.png" alt="point bleu">-->
+
+          <!-- TEST -->
+          <div class="ball">
+          <svg width="500" height="350">
+            <circle id="orange-circle" r="7" cx="50" cy="50" fill="#1b1464" />
+              <animate 
+              xlink:href="#orange-circle"
+              attributeName="cy"
+              from="50"
+              to="100" 
+              dur="3s"
+              begin="click"
+              calcMode="spline"
+              values="50; 100; 70; 100; 85; 100; 50"
+              keyTimes="0; 0.15; 0.3; 0.45; 0.6; 0.75; 1"
+              keySplines="0.42 0 1 1;
+                          0 0 0.59 1;
+                          0.42 0 1 1;
+                          0 0 0.59 1;
+                          0.42 0 1 1;
+                          0 0 0.59 1"
+              fill="freeze"  
+              id="circ-anim"/>
+          </svg>
+          </div>
+    
+        <!-- TEST -->
         </div>
         <div id="txtButton">
             <p id="txt">
@@ -42,6 +69,11 @@ h1 {
   margin-bottom: 10px;
   display: flex;
   justify-content: flex-end;
+}
+.ball {
+  position: absolute;
+  top: -25px;
+  right: 13%;
 }
 #blocTxt {
   display: flex;
