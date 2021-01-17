@@ -1,7 +1,7 @@
 <template>
   <div class="contact">
     <div class="icons">
-      <GoHome class="homeIcon"/>
+      <GoHome :wait="false" class="homeIcon"/>
       <GoAbout class="aboutIcon"/>
     </div>
     <div class="content">

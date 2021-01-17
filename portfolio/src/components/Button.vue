@@ -8,9 +8,19 @@
 
 export default {
   name: 'Button',
+  props: {
+    wait:{type:Boolean}
+  },
   methods:{
     go() {
-        this.$router.push({name:'ProjectCategories'})
+      if(this.wait===false){
+        this.projects()
+      } else {
+        setTimeout(this.projects, 1800)
+      }
+    },
+    projects() {
+      this.$router.push({name:'ProjectCategories'})
     }
   }
 }

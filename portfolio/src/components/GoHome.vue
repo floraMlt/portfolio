@@ -9,8 +9,18 @@
 
 export default {
   name: 'GoHome',
+  props: {
+    wait:{type:Boolean}
+  },
   methods:{
     goHome(){
+      if(this.wait===false){
+        this.home()
+      } else {
+        setTimeout(this.home, 1600)
+      }
+    },
+    home() {
       this.$router.push('/Home')
     }
   }

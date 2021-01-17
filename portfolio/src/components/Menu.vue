@@ -2,8 +2,8 @@
   <div class="menu">
     <img class="menuPicto" alt="Picto menu" src="@/assets/img/menu/menuPicto.png" @click="menuActive">
     <div id="otherIcons" :class="{'isOpen':isOpen}">
-        <GoHome class="iconAll"/>
-        <GoContact class="iconAll"/>
+        <GoHome :wait="false" class="iconAll"/>
+        <GoContact :wait="false" class="iconAll"/>
         <GoAbout class="iconAll"/>
     </div>
     <div class="cache"> </div>

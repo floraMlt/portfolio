@@ -9,8 +9,18 @@
 
 export default {
   name: 'GoContact',
+  props: {
+    wait:{type:Boolean}
+  },
   methods:{
     goContact(){
+      if(this.wait===false){
+        this.contact()
+      } else {
+        setTimeout(this.contact, 1600)
+      }
+    },
+    contact() {
       this.$router.push('/Contact')
     }
   }
