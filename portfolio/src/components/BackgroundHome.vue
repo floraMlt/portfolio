@@ -2,7 +2,8 @@
   <div class="images">  
     <img id="lines" src="../assets/img/deco/lines.png" alt="illustration2">
     <!-- TEST -->
-    <!--<svg class="blob blob5" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <div class="me">
+    <svg class="blob blob5" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
       <path fill="#1b1464" d="M9.6,-2.7C18.1,23.1,34.6,46.7,34,47.1C33.5,47.6,15.9,24.9,-7.1,8.4C-30.2,-8,-58.8,-18.2,-58.6,-32.6C-58.3,-47,-29.1,-65.5,-14.3,-60.9C0.5,-56.2,1.1,-28.4,9.6,-2.7Z" transform="translate(100 100)" />
     </svg>
     <svg class="blob blob4" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -19,9 +20,9 @@
     </svg>
     <svg class="blob blob7" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
       <path fill="#C61C1C" d="M9.6,-10.1C12,-4.6,13.3,-0.6,13.4,4.7C13.5,10,12.4,16.8,4.6,27.4C-3.3,38.1,-17.8,52.7,-20.6,49C-23.4,45.3,-14.5,23.3,-22,1.7C-29.5,-19.8,-53.5,-40.8,-52.6,-46C-51.7,-51.2,-25.8,-40.5,-11.1,-31.7C3.6,-22.8,7.2,-15.7,9.6,-10.1Z" transform="translate(100 100)" />
-    </svg>-->
-    <div class="me">
-    <svg class="blob blob5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.97 178.12">
+    </svg>
+    
+    <!--<svg class="blob blob5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.97 178.12">
       <path d="M24.62,170.88C31.34,150.33,39,134.84,35.9,109c-1.32-11.11-7-24.5-11.24-34.83S13.84,53.88,10.87,43C7.57,30.87,4.42,18,10,6.49c.5-1-1-1.93-1.54-.9C-1,25.24,6.74,46.85,14.7,65.53,19.23,76.15,23.62,86.72,26.21,98a135,135,0,0,1,3.37,34.29A134.94,134.94,0,0,1,22.9,170.4c-.36,1.1,1.36,1.57,1.72.48" fill="#272361"/>
     </svg>
     <svg class="blob blob8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.62 150.34">
@@ -41,7 +42,7 @@
     </svg>
     <svg class="blob blob7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 142.95 167.11">
       <path d="M7.1,9.29c29.11-3.92,58.83,10,81.21,28.56,23.14,19.17,38.64,42.86,44.77,72,3.54,16.85,3.86,34.27,2.38,51.41-.1,1.14,1,1.32,1.09.18,2.68-31.14-2.28-63.41-17.05-91.18C105.52,44,82.46,23,54.34,12.89A100.87,100.87,0,0,0,6.63,7.58C5.5,7.73,6,9.45,7.1,9.29" fill="#8D093F"/>
-    </svg>
+    </svg>-->
     
     <!-- TEST -->
     <img id="me" src="../assets/img/deco/meNew.png" alt="illustration de Flora Mallet">
@@ -59,13 +60,13 @@ export default {
     animeMe() {
       Anime({
         targets: '.blob',
-        opacity: 1,
+        opacity: 0.3,
         direction: 'alternate',
         duration: 2000,
         loop: true,
         easing: 'spring(100, 100, 10, 0)',
         delay: function(el, i) {
-          return i * 300;
+          return i * 900;
         }
       });
     }
@@ -81,70 +82,70 @@ export default {
   opacity: 0;
   width: 100%;
   position: absolute;
-  /*width: 23.5%;*/
-  width: 3%;
+  width: 23.5%;
+  /*width: 3%;*/
 }
 /*.blob1 {
   left: 11%;
   top: 235px;
 }*/
 .blob2 {
-  /*left: 19%;
+  left: 19%;
   top: 150px;
-  transform: rotate(100deg);*/
-  width: 15%;
+  transform: rotate(100deg);
+  /*width: 15%;
   left: 20.6%;
-  top: 260px;
+  top: 260px;*/
 }
 .blob3 {
-  /*left: 11%;
+  left: 11%;
   top: 423px;
-  width: 20%;*/
-  width: 4%;
+  width: 20%;
+  /*width: 4%;
   left: 34%;
-  top: 480px;
+  top: 480px;*/
 }
 .blob4 {
-  /*left: 25.4%;
+  left: 25.4%;
   top: 440px;
   transform: rotate(-50deg);
-  width: 15%;*/
-  top: 330px;
+  width: 15%;
+  /*top: 330px;
   left: 18%;
   width: 3.2%;
-  transform: rotate(5deg);
+  transform: rotate(5deg);*/
 }
 .blob5 {
-  /*left: 28%;
+  left: 28%;
   top: 390px;
   transform: rotate(200deg);
-  width: 10%;*/
-  top: 530px;
-  left: 19%;
+  width: 10%;
+  /*top: 530px;
+  left: 19%;*/
 }
 .blob6 {
-  /*left: 11.5%;
+  left: 11.5%;
   top: 380px;
   transform: rotate(30deg);
-  width: 16%;*/
-  width: 37%;
+  width: 16%;
+  /*width: 37%;
   top: 380px;
-  left: 14%;
+  left: 14%;*/
 }
 .blob7 {
-  /*left: 12.5%;
+  left: 12.5%;
   top: 270px;
   transform: rotate(220deg);
-  width: 12%;*/
-  width: 7%;
+  width: 12%;
+  /*width: 7%;
   top: 255px;
-  left: 25.5%;
+  left: 25.5%;*/
 }
-.blob8 {
+/*.blob8 {
   width: 2.3%;
   top: 530px;
   left: 22.4%;
-}
+}*/
 .images {
   display: flex;
   justify-content: space-between;
