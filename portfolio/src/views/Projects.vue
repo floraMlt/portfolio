@@ -4,23 +4,23 @@
     <p id="titleProjects"> {{this.currentCategory}} </p>
     <img id="deco1" alt="deco" src="@/assets/img/deco/linesNewBlanc.png">
     <img id="deco2" alt="deco" src="@/assets/img/deco/linesNewBlanc1.png">
-      <div id="contentProjects">
-          <div id="navigation">
-            <div class="pages" :class="{ activeCat: this.catSelected == 'All' }" @click="changeCategory('All')">All</div>
-            <div class="pages" :class="{ activeCat: this.catSelected == 'Web' }" @click="changeCategory('Web')">Web</div>
-            <div class="pages" :class="{ activeCat: this.catSelected == 'Graphisme' }" @click="changeCategory('Graphisme')">Graphisme</div>
-            <div class="pages" :class="{ activeCat: this.catSelected == 'Animation' }" @click="changeCategory('Animation')">Animation</div>
-            <div class="pages" :class="{ activeCat: this.catSelected == 'Illustration' }" @click="changeCategory('Illustration')">Illustration</div>
-            <div class="pages" :class="{ activeCat: this.catSelected == 'Interactivé' }" @click="changeCategory('Interactivé')">Interactivé</div>
-            <div class="pages" :class="{ activeCat: this.catSelected == 'Projet3D' }" @click="changeCategory('Projet3D')">3D</div>
-            <div class="pages" :class="{ activeCat: this.catSelected == 'Audiovisuel' }" @click="changeCategory('Audiovisuel')">Audiovisuel</div>
-            <div class="pages" :class="{ activeCat: this.catSelected == 'Programmation 3D' }" @click="changeCategory('Programmation 3D')">Programmation 3D</div>
-          </div>
-          <div id="gradientCache"></div>
-        <div class="scroll" ref="scrollContener">
-          <ProjectItem class="listProjects" v-for="project in selectProject" :key="project.title" :projet="project"/>
-        </div>
+    <div id="contentProjects">
+      <div id="navigation">
+        <div class="pages" :class="{ activeCat: this.catSelected == 'All' }" @click="changeCategory('All')">All</div>
+        <div class="pages" :class="{ activeCat: this.catSelected == 'Web' }" @click="changeCategory('Web')">Web</div>
+        <div class="pages" :class="{ activeCat: this.catSelected == 'Graphisme' }" @click="changeCategory('Graphisme')">Graphisme</div>
+        <div class="pages" :class="{ activeCat: this.catSelected == 'Animation' }" @click="changeCategory('Animation')">Animation</div>
+        <div class="pages" :class="{ activeCat: this.catSelected == 'Illustration' }" @click="changeCategory('Illustration')">Illustration</div>
+        <div class="pages" :class="{ activeCat: this.catSelected == 'Interactivé' }" @click="changeCategory('Interactivé')">Interactivé</div>
+        <div class="pages" :class="{ activeCat: this.catSelected == 'Projet3D' }" @click="changeCategory('Projet3D')">3D</div>
+        <div class="pages" :class="{ activeCat: this.catSelected == 'Audiovisuel' }" @click="changeCategory('Audiovisuel')">Audiovisuel</div>
+        <div class="pages" :class="{ activeCat: this.catSelected == 'Programmation 3D' }" @click="changeCategory('Programmation 3D')">Programmation 3D</div>
       </div>
+      <div id="gradientCache"></div>
+      <div class="scroll" ref="scrollContener">
+        <ProjectItem class="listProjects" v-for="project in selectProject" :key="project.title" :projet="project"/>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -101,6 +101,51 @@ export default {
   width: 100%;
   height: 100%;
 }
+.contactIcon {
+  position: absolute;
+  left: 6.2%;
+  top: 4%;
+}
+.aboutIcon {
+  position: absolute;
+  left: 10%;
+  top: 4%;
+}
+.homeIcon {
+  position: absolute;
+  left: 2%;
+  top: 4%;
+}
+.listProjects {
+  margin: 5px 3% 20px 3%;
+  position: relative;
+  z-index: 2;
+}
+.scroll {
+  overflow: auto !important;
+  max-height: calc(100vh - 180px);
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  position: relative;
+  width: 100%;
+  margin-top: 39px;
+}
+.pages {
+  font-size: 0.9em;
+  margin: -2% 0% 3% 1%;
+  padding: 0.8% 1%;
+  color: white;
+  height: fit-content;
+  background-color:  #C1272D;
+  border-radius: 5px;
+  text-align: center;
+  transition: padding 0.5s;
+}
+.activeCat {
+  box-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);
+}
+.footer { display: none; }
 #deco1 {
   width: 2.3vw;
   position: absolute;
@@ -141,36 +186,6 @@ export default {
   z-index: 4;
   background: linear-gradient(#7C7AA7, rgba(0,0,0,0));
 }
-.contactIcon {
-  position: absolute;
-  left: 6.2%;
-  top: 4%;
-}
-.aboutIcon {
-  position: absolute;
-  left: 10%;
-  top: 4%;
-}
-.homeIcon {
-  position: absolute;
-  left: 2%;
-  top: 4%;
-}
-.listProjects {
-  margin: 5px 3% 20px 3%;
-  position: relative;
-  z-index: 2;
-}
-.scroll {
-  overflow: auto !important;
-  max-height: calc(100vh - 180px);
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
-  position: relative;
-  width: 100%;
-  margin-top: 39px;
-}
 #navigation {
   position: fixed;
   display: flex;
@@ -180,21 +195,6 @@ export default {
   width: 71%;
   z-index: 7;
 }
-.pages {
-  font-size: 0.9em;
-  margin: -2% 0% 3% 1%;
-  padding: 0.8% 1%;
-  color: white;
-  height: fit-content;
-  background-color:  #C1272D;
-  border-radius: 5px;
-  text-align: center;
-  transition: padding 0.5s;
-}
-.activeCat {
-  box-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);
-}
-.footer { display: none; }
 .pages:hover {
   padding: 1% 1.2%;
 }

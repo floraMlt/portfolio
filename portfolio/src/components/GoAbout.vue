@@ -9,8 +9,18 @@
 
 export default {
   name: 'GoAbout',
+  props: {
+    wait:{type:Boolean}
+  },
   methods:{
     goAbout(){
+      if(this.wait===false){
+        this.about()
+      } else {
+        setTimeout(this.about, 1600)
+      }
+    },
+    about() {
       this.$router.push('/About')
     }
   }

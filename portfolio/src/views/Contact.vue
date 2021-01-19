@@ -1,8 +1,8 @@
 <template>
   <div class="contact">
-    <div class="icons">
-      <GoHome :wait="false" class="homeIcon"/>
-      <GoAbout class="aboutIcon"/>
+    <div class="icons"  @click="lineLeave">
+      <GoHome :wait="true" class="homeIcon"/>
+      <GoAbout :wait="true" class="aboutIcon"/>
     </div>
     <div class="content">
       <Rose class="rose"/>
@@ -19,6 +19,9 @@
       </div>
     </div>
     <img id="meB" alt="dessin" src="@/assets/img/deco/meBlc.png">
+    <svg class="animLine" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 636 918">
+      <path id="linePath" stroke="#fff" fill="none" stroke-width="1" d="M217.5,9.5s37.23,132.4-115,254c-164,131-69,478,236,456s285,190,285,190"/>
+    </svg>
   </div>
 </template>
 
@@ -26,6 +29,7 @@
 import GoHome from '@/components/GoHome.vue'
 import GoAbout from '@/components/GoAbout.vue'
 import Rose from '@/components/Rose.vue'
+import Anime from 'animejs/lib/anime.es.js';
 
 export default {
   name: 'Contact',
@@ -34,9 +38,38 @@ export default {
     GoAbout,
     Rose
   },
+  methods: {
+    lineEnter() {
+      var animation = Anime({
+        targets: '.animLine path',
+        strokeDashoffset: [Anime.setDashoffset, 1],
+        easing: 'easeInOutSine',
+        duration: 1200,
+        delay: 500,
+        autoplay: false,
+        direction: 'alternate'
+      });
+      animation.play()
+      setTimeout(animation.pause, 1700)
+    },
+    lineLeave() {
+      var animation = Anime({
+        targets: '.animLine path',
+        strokeDashoffset: [Anime.setDashoffset, 1],
+        easing: 'easeInOutSine',
+        duration: 1200,
+        delay: 500,
+        autoplay: false,
+        direction: 'reverse'
+        });
+      animation.play()
+      setTimeout(animation.pause, 1300)
+    }
+  },
   mounted() {
     window.addEventListener('resize', this.onResize)
     this.$parent.onResize()
+    this.lineEnter()
   }
 }
 </script>
@@ -109,6 +142,11 @@ export default {
   left: 43%;
   top: 165px;
   z-index: 0;
+}
+.animLine {
+  position: absolute;
+  width: 34%;
+  left: 20%;
 }
 #meB {
   position: absolute;
