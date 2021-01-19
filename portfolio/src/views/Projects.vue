@@ -6,7 +6,6 @@
     <img id="deco2" alt="deco" src="@/assets/img/deco/linesNewBlanc1.png">
       <div id="contentProjects">
           <div id="navigation">
-            <!--<CategoryBar/>-->
             <div class="pages" :class="{ activeCat: this.catSelected == 'All' }" @click="changeCategory('All')">All</div>
             <div class="pages" :class="{ activeCat: this.catSelected == 'Web' }" @click="changeCategory('Web')">Web</div>
             <div class="pages" :class="{ activeCat: this.catSelected == 'Graphisme' }" @click="changeCategory('Graphisme')">Graphisme</div>
@@ -21,7 +20,6 @@
         <div class="scroll" ref="scrollContener">
           <ProjectItem class="listProjects" v-for="project in selectProject" :key="project.title" :projet="project"/>
         </div>
-        <!--<div id="gradientCache2"></div>-->
       </div>
   </div>
 </template>
@@ -29,15 +27,13 @@
 <script>
 import ProjectItem from '@/components/ProjectItem.vue'
 import MenuVert from '@/components/MenuVert.vue'
-/*import CategoryBar from '@/components/CategoryBar.vue'*/
 import projectData from '@/datas/projects'
 
 export default {
   name: 'Projects',
   components: {
     MenuVert,
-    ProjectItem/*,
-    CategoryBar*/
+    ProjectItem
   },
   mounted() {
     this.getCategory()
@@ -145,14 +141,6 @@ export default {
   z-index: 4;
   background: linear-gradient(#7C7AA7, rgba(0,0,0,0));
 }
-/*#gradientCache2 {
-  position: fixed;
-  width: 62%;
-  height: 9px;
-  top: 692.5px;
-  z-index: 4;
-  background: linear-gradient( rgba(0,0,0,0), #7C7AA7);
-}*/
 .contactIcon {
   position: absolute;
   left: 6.2%;
@@ -204,7 +192,6 @@ export default {
   transition: padding 0.5s;
 }
 .activeCat {
-  /*background-color: #950005 !important;*/
   box-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);
 }
 .footer { display: none; }
@@ -218,11 +205,6 @@ export default {
     margin-top: 63px; 
     max-height: calc(100vh - 200px);
   }
-  #gradientCache { top: 182px; }
-  /*#gradientCache2 { top: 696.5px; }*/
-}
-@media (max-width: 980px){
-  /*#gradientCache2 { top: 696.2px; width: 60%;}*/
 }
 @media (max-width: 900px){
   #contentProjects { width: 80%; }
@@ -230,7 +212,6 @@ export default {
   #deco2 { width: 8vw; }
   #titleProjects { font-size: 2.5em; top: 32px; }
   #gradientCache { width: 75%; }
-  /*#gradientCache2 { width: 75%;}*/
 }
 @media (max-width: 628px){
   .scroll { 
@@ -243,17 +224,14 @@ export default {
   #titleProjects { font-size: 2.4em; top: 55px; }
   #navigation { width: 88%; }
   #gradientCache { top: 198px; }
-  /*#gradientCache2 { top: 691.5px; }*/
 }
 @media (max-width: 376px){
   #titleProjects { top: 37px; }
   #contentProjects { margin-top: 100px; }
   #gradientCache { top: 194px; }
-  /*#gradientCache2 { top: 672.5px; width: 69%; }*/
   .scroll {
     margin-top: 94px; 
     max-height: calc(100vh - 235px);
   }
 }
 </style>
-
