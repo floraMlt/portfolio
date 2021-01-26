@@ -44,10 +44,9 @@ export default {
         duration: 1900,
         delay: 500,
         autoplay: false,
-        direction: 'alternate'
+        direction: 'normal'
       });
       animation.play()
-      setTimeout(animation.pause, 2400)
     },
     /* Start animation on the line leaving the screen when we go to an other page*/
     lineLeave() {
@@ -61,7 +60,6 @@ export default {
         direction: 'reverse'
         });
       animation.play()
-      setTimeout(animation.pause, 2000)
     }
   },
   mounted() {

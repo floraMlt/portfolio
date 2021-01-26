@@ -47,10 +47,9 @@ export default {
         duration: 1200,
         delay: 500,
         autoplay: false,
-        direction: 'alternate'
+        direction: 'normal'
       });
       animation.play()
-      setTimeout(animation.pause, 1700)
     },
     lineLeave() {
       var animation = Anime({
@@ -63,7 +62,6 @@ export default {
         direction: 'reverse'
         });
       animation.play()
-      setTimeout(animation.pause, 1300)
     }
   },
   mounted() {

@@ -52,26 +52,24 @@ export default {
         targets: '.animLine path',
         strokeDashoffset: [Anime.setDashoffset, 1],
         easing: 'easeInOutSine',
-        duration: 1500,
+        duration: 1200,
         delay: 500,
         autoplay: false,
-        direction: 'alternate'
+        direction: 'normal'
       });
       animation.play()
-      setTimeout(animation.pause, 2060)
     },
     lineLeave() {
       var animation = Anime({
         targets: '.animLine path',
         strokeDashoffset: [Anime.setDashoffset, 1],
         easing: 'easeInOutSine',
-        duration: 1500,
+        duration: 1200,
         delay: 500,
         autoplay: false,
         direction: 'reverse'
         });
       animation.play()
-      setTimeout(animation.pause, 2000)
     }
   },
   mounted() {
