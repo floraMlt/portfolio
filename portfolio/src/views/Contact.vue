@@ -154,41 +154,50 @@ export default {
 }
 
 /* RESPONSIVE */
+@media (max-width: 1300px){
+  .animLine { width: 46%; }
+}
 @media (max-width: 1100px){
   .icons { width: 24%; }
   .aboutIcon { margin-left: 11%; }
   .homeIcon { margin-left: 5%; }
-  #meB { width: 25%; }
   .title { margin-bottom: 35px; }
   .contactPoint { margin: 0 40px; }
   .content { margin-bottom: 90px; }
+  .animLine { display: none; }
+  .rose { top: 125px; left: 41%; }
+  #meB { width: 25%; }
 }
 @media (max-width: 870px){
   .icons { width: 28%; }
+  .rose { left: 39%; }
   #meB { width: 29%; left: 65%; }
 }
 @media (max-width: 680px){
   .aboutIcon { margin-left: 18%; }
   .homeIcon { margin-left: 10%; }
+  .rose { left: 35%; }
   #meB { width: 35%; left: 60%; }
 }
 @media (max-width: 550px){
   .aboutIcon { margin-left: 25%; }
   .homeIcon { margin-left: 15%; }
+  .rose { left: 30%; }
   #meB { width: 40%; left: 55%; }
 }
 @media (max-width: 440px){
   .icons { width: 32%; }
   .aboutIcon { margin-left: 35%; }
   .homeIcon { margin-left: 25%; }
-  #meB { width: 50%; left: 20%; }
   .title { font-size: 2.4em; margin-bottom: 20px; }
   .ssTitle { font-size: 1.2em; }
   .txt { font-size: 1em; text-align: center; }
   .contactPoint { margin: 15px 20px; }
+  #meB { width: 50%; left: 20%; }
 }
 @media (max-width: 360px){
   .contactList { flex-direction: column; }
   .title { margin-bottom: 5px; }
+  .rose { display: none; }
 }
 </style>
