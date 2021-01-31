@@ -1,8 +1,8 @@
 <template lang="html">
   <div>
     <sui-modal v-model="open">
-    <i class="close icon" id= "closeIcon" @click="toggle"></i>
-    <sui-image class="zoomImg" wrapped size="big" :src="this.imgSrc"/>
+      <i class="close icon" id= "closeIcon" @click="toggle"></i>
+      <img class="zoomImg" wrapped size="big" v-bind:src="imgSrc"/>
     </sui-modal>
   </div>
 </template>
@@ -12,26 +12,26 @@ export default {
   name: 'Modal',
   data() {
     return { 
-        open: false
-    };
+      open: false
+    }
   },
   props: {
-    imgSrc:{type:String, required:true}
+    imgSrc: { type:String }
   },
   methods: {
     toggle() {
-      this.open = !this.open;
+      this.open = !this.open
     },
   },
-};
+}
 </script>
 
 <style lang="css">
 .zoomImg{
-    width: 100% !important;
-    margin: 0 auto;
-    border-radius: 10px !important;
-    overflow: hidden;
+  width: 100% !important;
+  margin: 0 auto;
+  border-radius: 10px !important;
+  overflow: hidden;
 }
 #closeIcon {
   z-index: 15;

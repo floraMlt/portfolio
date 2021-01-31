@@ -12,16 +12,16 @@ export default {
   name: 'ModalCv',
   data() {
     return { 
-        open: false,
-        cvLink: require("@/assets/img/cvNew.jpg")
-    };
+      open: false,
+      cvLink: require("@/assets/img/cvNew.jpg")
+    }
   },
   methods: {
     toggle() {
-      this.open = !this.open;
+      this.open = !this.open
     },
   },
-};
+}
 </script>
 
 <style lang="css">
