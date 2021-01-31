@@ -1,8 +1,9 @@
 <template>
   <div class="projectDetails">
     <router-link :to="{name: 'Projects'}" id="retour">
-      <i class="arrow alternate circle left outline icon projects">
-      </i> <p class="txtRetour">Retour aux projets</p>
+      <!--<i class="arrow alternate circle left outline icon projects">
+      </i> <p class="txtRetour">Retour aux projets</p>-->
+      <ButtonReturn id="buttonReturn"/>
     </router-link>
     <img id="deco1" alt="deco" src="@/assets/img/deco/lines5.png">
     <img id="deco2" alt="deco" src="@/assets/img/deco/lines.png">
@@ -34,6 +35,7 @@ import projets from '@/datas/projects'
 import projetsIndex from '@/datas/projectsIndex'
 import Modal from '@/components/Modal.vue'
 import ButtonSeeProject from '@/components/ButtonSeeProject.vue'
+import ButtonReturn from '@/components/ButtonReturn.vue'
 
 export default {
   name: 'ProjectDetails',
@@ -77,7 +79,8 @@ export default {
   },
   components: {
     Modal,
-    ButtonSeeProject
+    ButtonSeeProject,
+    ButtonReturn
   },
   mounted() {
     this.$parent.onResize();
@@ -89,6 +92,7 @@ export default {
 </script>
 
 <style scoped>
+
 h1{
   color: #C1272D;
   font-family: 'bodoniB';
@@ -117,6 +121,7 @@ h1{
   -moz-user-select: none; 
   -ms-user-select: none; 
   user-select: none;
+  height: inherit;
 }
 .mosaicImg {
   display: flex;

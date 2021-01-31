@@ -20,7 +20,8 @@
       <path id="linePath" stroke="#fff" fill="none" stroke-width="1" d="M12.73,26.07S127.42-45.35,302.26,162.41C479.84,373.42,761.58,364.52,843,356.59c102.51-10,212.69-44.68,240.38-105,13-28.34,1.54-44.42-8-41.06"/>
     </svg>
     <div class="meBox">
-      <img id="meB" alt="dessin" src="@/assets/img/deco/meBlc.png">
+      <Canvas id="meB"/>
+      <!--<img id="meB" alt="dessin" src="@/assets/img/deco/meBlc.png">-->
     </div>
   </div>
 </template>
@@ -29,6 +30,7 @@
 import ModalCV from '@/components/ModalCV.vue'
 import GoHome from '@/components/GoHome.vue'
 import GoContact from '@/components/GoContact.vue'
+import Canvas from '@/components/Canvas.vue';
 import Anime from 'animejs/lib/anime.es.js';
 
 export default {
@@ -36,7 +38,8 @@ export default {
   components : {
     ModalCV,
     GoHome,
-    GoContact
+    GoContact,
+    Canvas
   },
   data(){
     return {
@@ -151,16 +154,13 @@ export default {
   position: relative;
   z-index: 0;
   width: 90%;
-  margin-top: -110px;
+  margin-top: -320px;
 }
 .animLine {
   position: absolute;
   width: 60%;
   left: -2%;
   top: 370px;
-}
-#meB {
-  width: 20%;
 }
 .zoomCv:hover {
   background-color: #C1272D;
@@ -178,24 +178,24 @@ export default {
   .title { font-size: 2.8em; }
   .txt { font-size: 1.1em; }
   .zoomCv { font-size: 1.1em; }
-  .meBox { width: 108%; }
   .animLine { width: 56%; top: 460px; }
-  #meB { margin-right: 10%; }
+}
+@media (max-width: 970px){
+  .meBox { display: none; }
+  .content { margin: 0;}
+  .animLine { top: 500px; }
 }
 @media (max-width: 870px){
   .icons { width: 28%; }
   .txt { font-size: 1.05em; width: 65%;}
-  .meBox { width: 122%; }
   .zoomCv { padding: 1% 2%; }
   .animLine { top: 520px; }
-  #meB { margin-right: 15%; }
 }
 @media (max-width: 680px){
   .contactIcon { margin-left: 18%; }
   .homeIcon { margin-left: 10%; }
   .content { margin-top: 89px; }
   .txt { font-size: 1em; width: 80%; }
-  .meBox { margin-top: -42px; }
   .animLine { display: none; }
 }
 @media (max-width: 550px){
@@ -203,7 +203,6 @@ export default {
   .homeIcon { margin-left: 15%; }
   .content { margin-right: 0; }
   .txt { width: 73%; }
-  .meBox { margin-top: -10px; }
 }
 @media (max-width: 440px){
   .icons { width: 32%; }
@@ -212,7 +211,5 @@ export default {
   .title { font-size: 2.2em; }
   .txt { font-size: 0.95em; text-align: center; width: 85%; }
   .zoomCv { font-size: 1em; }
-  .meBox { margin-top: 31px; width: 173%; }
-  #meB { margin-right: 26%; }
 }
 </style>

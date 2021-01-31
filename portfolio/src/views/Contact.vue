@@ -18,7 +18,7 @@
         </div>
       </div>
     </div>
-    <img id="meB" alt="dessin" src="@/assets/img/deco/meBlc.png">
+    <Canvas id="meB"/>
     <svg class="animLine" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 636 918">
       <path id="linePath" stroke="#fff" fill="none" stroke-width="1" d="M217.5,9.5s37.23,132.4-115,254c-164,131-69,478,236,456s285,190,285,190"/>
     </svg>
@@ -29,14 +29,16 @@
 import GoHome from '@/components/GoHome.vue'
 import GoAbout from '@/components/GoAbout.vue'
 import Rose from '@/components/Rose.vue'
-import Anime from 'animejs/lib/anime.es.js';
+import Canvas from '@/components/Canvas.vue'
+import Anime from 'animejs/lib/anime.es.js'
 
 export default {
   name: 'Contact',
   components : {
     GoHome,
     GoAbout,
-    Rose
+    Rose,
+    Canvas
   },
   methods: {
     lineEnter() {
@@ -148,14 +150,16 @@ export default {
 }
 #meB {
   position: absolute;
-  width: 20%;
-  left: 70%;
-  bottom: 30px;
+  left: 48%;
+  bottom: -150px;
 }
 
 /* RESPONSIVE */
 @media (max-width: 1300px){
   .animLine { width: 46%; }
+}
+@media (max-width: 1200px){
+  #meB { left: 43%; bottom: -160px; }
 }
 @media (max-width: 1100px){
   .icons { width: 24%; }
@@ -166,7 +170,12 @@ export default {
   .content { margin-bottom: 90px; }
   .animLine { display: none; }
   .rose { top: 125px; left: 41%; }
-  #meB { width: 25%; }
+  #meB { left: 35%; bottom: -180px; }
+}
+@media (max-width: 950px){
+  .content { margin-bottom: 0px; }
+  .rose { top: 170px;}
+  #meB { display: none; }
 }
 @media (max-width: 870px){
   .icons { width: 28%; }
