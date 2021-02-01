@@ -62,58 +62,37 @@ export default {
   position: absolute;
 }
 .blob2 {
-  /*width: 15%;
-  left: 20.6%;
-  top: 260px;*/
   width: 63%;
   left: 20.8%;
   top: 22px;
 }
 .blob3 {
-  /*width: 4%;
-  left: 34%;
-  top: 480px;*/
   width: 20%;
   left: 75%;
   top: 220px;
 }
 .blob4 {
-  /*top: 330px;
-  left: 18%;
-  width: 3.2%;
-  transform: rotate(5deg);*/
   width: 16%;
   transform: rotate(5deg);
   top: 80px;
   left: 5%;
 }
 .blob5 {
-  /*top: 530px;
-  left: 19%;*/
   width: 12%;
   top: 290px;
   left: 13%;
 }
 .blob6 {
-  /*width: 37%;
-  top: 380px;
-  left: 14%;*/
   width: 168%;
   left: -14%;
   top: 120px;
 }
 .blob7 {
-  /*width: 7%;
-  top: 255px;
-  left: 25.5%;*/
   width: 31%;
   left: 38%;
   top: 13px;
 }
 .blob8 {
-  /*width: 2.3%;
-  top: 530px;
-  left: 22.4%;*/
   width: 10%;
   left: 26%;
   top: 275px;

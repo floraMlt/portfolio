@@ -31,8 +31,8 @@ export default {
   margin-right: auto;
 }
 .zoomImg{
-    width: 20vw !important;
-    overflow: hidden !important;
+  width: 20vw !important;
+  overflow: hidden !important;
 }
 .closeIcon {
   z-index: 15;

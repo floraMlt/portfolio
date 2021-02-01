@@ -30,4 +30,7 @@ export default {
 </script>
 
 <style lang="css">
+.ball:hover {
+  cursor: pointer;
+}
 </style>

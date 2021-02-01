@@ -16,6 +16,8 @@ export default {
     goAbout(){
       if(this.wait===false){
         this.about()
+      } else if(this.$parent.$options.name === 'Contact' && window.innerWidth <= 1100) {
+        this.about()
       } else {
         setTimeout(this.about, 1600)
       }
@@ -31,14 +33,10 @@ export default {
 .aboutPicto {
   color: white;
   width: 50%;
-  opacity: 0.8;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-.aboutPicto:hover {
-  opacity: 1;
 }
 .about {
   font-size: 1em;
@@ -53,6 +51,11 @@ export default {
   align-items: center;
   width: 100%;
   height: fit-content;
+  opacity: 0.8;
+}
+.goAbout:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 
 /* RESPONSIVE */

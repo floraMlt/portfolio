@@ -31,7 +31,6 @@ export default {
       this.$router.push('/projects/' + this.$parent.currentCategory +"/"+ this.projectData.routerTitle).catch(()=>{})
     }
   }
-  // this.$currentViewProject = projet
 }
 </script>
 
@@ -57,16 +56,12 @@ export default {
   max-height: 100%;
   border-radius: 8px;
 }
-img {
-    color:grey;
-}
+img { color:grey; }
 #resumeProject {
   font-size: 0.9em;
   width: 95%;
 }
-#titleProject {
-  margin-top: 1%;
-}
+#titleProject { margin-top: 1%; }
 #see {
   width: 187px;
   margin-left: auto;

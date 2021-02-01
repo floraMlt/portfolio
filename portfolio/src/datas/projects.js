@@ -1,4 +1,4 @@
-
+// Datas for all the projects
 const projects =
 [
     {

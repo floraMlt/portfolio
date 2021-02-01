@@ -33,9 +33,13 @@ export default {
 #decoButton:hover {
   background-color: #C1272D ;
   color: white;
+  cursor: pointer;
 }
 #decoButton:active {
   outline-style:none;
+}
+#decoButton:focus {
+  outline: none;
 }
 
 /* REPONSIVE */

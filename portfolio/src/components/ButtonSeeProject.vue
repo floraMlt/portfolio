@@ -44,9 +44,13 @@ export default {
 }
 #decoButton:hover {
   color: #C1272D;
+  cursor: pointer;
 }
 #decoButton:active {
-  outline-style:none;
+  outline-style: none;
+}
+#decoButton:focus {
+  outline: none;
 }
 
 /* RESPONSIVE */

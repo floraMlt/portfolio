@@ -28,44 +28,30 @@ export default {
 </script>
 
 <style scoped>
-.imgCat {
-  height: 16vh;
-}
+.imgCat { height: 16vh; }
+.imgCat:hover { cursor: pointer; }
 
 /* RESPONSIVE */
 @media (max-width: 1120px){
-  .imgCat {
-    height: 15vh;
-  }
+  .imgCat { height: 15vh; }
 }
 @media (max-width: 1000px){
-  .imgCat {
-    height: 14.5vh;
-  }
+  .imgCat { height: 14.5vh; }
 }
 @media (max-width: 930px){
-  .imgCat {
-    height: 13vh;
-  }
+  .imgCat { height: 13vh; }
 }
 @media (max-width: 808px){
-  .imgCat {
-    height: 12vh;
-  }
+  .imgCat { height: 12vh; }
 }
 @media (max-width: 750px){
-  .imgCat {
-    height: 11vh;
-  }
+  .imgCat { height: 11vh; }
+  .category { height: fit-content; }
 }
 @media (max-width: 520px){
-  .imgCat {
-    height: 10vh;
-  }
+  .imgCat { height: 10vh; }
 }
 @media (max-width: 400px){
-  #devJv {
-    height: 9.2vh;
-  }
+  #devJv { height: 9.2vh; }
 }
 </style>

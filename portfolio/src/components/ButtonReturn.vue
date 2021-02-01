@@ -14,7 +14,8 @@ export default {
 <style scoped>
 a.btn{
 	position: absolute;    
-  color: #fff;    
+  color: #280047;
+  opacity: 0.8;   
   font-size: 1.1em;
   width: 100px;
   height: 50px;
@@ -65,6 +66,7 @@ span::after{
 
 a.btn:hover{
   color: #280047;
+  opacity: 1;
 }
 
 a.btn:hover::before,

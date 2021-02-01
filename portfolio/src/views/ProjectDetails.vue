@@ -217,7 +217,10 @@ h1{
 }
 #mainImg:hover {
   cursor: zoom-in;
-} 
+}
+#right:hover, #left:hover {
+ cursor: pointer;
+}
 
 /* RESPONSIVE*/
 @media (max-width: 1300px){

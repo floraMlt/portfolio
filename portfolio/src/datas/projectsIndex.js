@@ -1,3 +1,4 @@
+// Index for projects
 const projectsIndex =
 {
     CapSciences: 0,

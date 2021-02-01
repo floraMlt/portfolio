@@ -44,6 +44,7 @@ export default {
 }
 .menuPicto:hover {
   opacity: 1;
+  cursor: pointer;
 }
 .iconAll {
   position: relative;

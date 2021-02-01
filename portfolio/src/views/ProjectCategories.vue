@@ -46,8 +46,6 @@ export default {
   background-color: #280047;
   display:grid;
   grid-template-columns: 33% 33% 33%;
-  /*min-width: 100%;
-  min-height: 100%;*/
   min-width: 100vw;
   min-height: 100vh;
 }

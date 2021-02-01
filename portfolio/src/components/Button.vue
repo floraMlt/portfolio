@@ -15,6 +15,8 @@ export default {
     go() {
       if(this.wait===false){
         this.projects()
+      } else if (window.innerWidth <= 980) {
+        this.projects()
       } else {
         setTimeout(this.projects, 1800)
       }
@@ -35,7 +37,6 @@ export default {
   font-family: "BodoniI";
   font-size: 1.3em;
   padding: 2% 5%;
-  /*transition: padding 0.5s, font-size 0.5s;*/
   transition: background-color 0.5s, color 0.5s;
 }
 .button {
@@ -43,14 +44,17 @@ export default {
   justify-content: center;
 }
 #decoButton:hover {
-  /*font-size: 1.4em;
-  padding: 2.8% 5.8%;*/
   background-color: #C1272D ;
   color: white;
+  cursor: pointer;
 }
 #decoButton:active {
-  outline-style:none;
+  outline-style: none;
 }
+#decoButton:focus {
+  outline: none;
+}
+
 /* RESPONSIVE */
 @media (max-width: 508px){
   #decoButton {

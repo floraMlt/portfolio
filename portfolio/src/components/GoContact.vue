@@ -16,6 +16,8 @@ export default {
     goContact(){
       if(this.wait===false){
         this.contact()
+      } else if(this.$parent.$options.name === 'About' && window.innerWidth <= 680) {
+        this.contact()
       } else {
         setTimeout(this.contact, 1600)
       }
@@ -31,14 +33,10 @@ export default {
 .atPicto {
   color: white;
   width: 50%;
-  opacity: 0.8;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-.atPicto:hover {
-  opacity: 1;
 }
 .contact {
   font-size: 1em;
@@ -53,6 +51,11 @@ export default {
   align-items: center;
   width: 100%;
   height: fit-content;
+  opacity: 0.8;
+}
+.goContact:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 
 /* RESPONSIVE */

@@ -133,7 +133,7 @@ export default {
 }
 .pages {
   font-size: 0.9em;
-  margin: -2% 0% 3% 1%;
+  margin: -19px 0% 23px 1%;
   padding: 0.8% 1%;
   color: white;
   height: fit-content;
@@ -144,6 +144,7 @@ export default {
 }
 .activeCat {
   box-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);
+  padding: 1% 1.2%;
 }
 .footer { display: none; }
 #deco1 {
@@ -197,14 +198,18 @@ export default {
 }
 .pages:hover {
   padding: 1% 1.2%;
+  cursor: pointer;
 }
 
 /* RESPONSIVE */
 @media (max-width: 1222px){
-  .scroll { 
-    margin-top: 63px; 
-    max-height: calc(100vh - 200px);
-  }
+  
+}
+@media (max-width: 1198px){
+  #navigation { width: 62%; }
+}
+@media (max-width: 1198px){
+  .scroll { margin-top: 63px; max-height: calc(100vh - 200px); }
 }
 @media (max-width: 900px){
   #contentProjects { width: 80%; }
@@ -215,18 +220,20 @@ export default {
 }
 @media (max-width: 628px){
   .scroll { 
-    margin-top: 78px; 
+    margin-top: 63px; 
     max-height: calc(100vh - 220px);
   }
-  .pages { font-size: 0.85em; }
+  .pages { font-size: 0.85em; margin: -13px 0% 23px 1%; }
   #deco1 { width: 4.1vw; }
   #deco2 { width: 9vw; }
-  #titleProjects { font-size: 2.4em; top: 55px; }
-  #navigation { width: 88%; }
-  #gradientCache { top: 198px; }
+  #titleProjects { font-size: 2.4em; }
+  #navigation { width: 75%; }
+  #gradientCache { top: 188px; }
 }
-@media (max-width: 376px){
-  #titleProjects { top: 37px; }
+@media (max-width: 510px){
+  #navigation { width: 72%; }
+}
+@media (max-width: 395px){
   #contentProjects { margin-top: 100px; }
   #gradientCache { top: 194px; }
   .scroll {

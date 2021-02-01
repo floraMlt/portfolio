@@ -4,7 +4,7 @@
     <div id="otherIcons" :class="{'isOpen':isOpen}">
         <GoHome :wait="false" class="iconAll"/>
         <GoContact :wait="false" class="iconAll"/>
-        <GoAbout class="iconAll"/>
+        <GoAbout :wait="false" class="iconAll"/>
     </div>
     <div class="cache"> </div>
   </div>
@@ -44,6 +44,7 @@ export default {
 }
 .menuPicto:hover {
   opacity: 1;
+  cursor: pointer;
 }
 .iconAll {
   position: relative;

@@ -21,7 +21,6 @@
     </svg>
     <div class="meBox">
       <Canvas id="meB"/>
-      <!--<img id="meB" alt="dessin" src="@/assets/img/deco/meBlc.png">-->
     </div>
   </div>
 </template>
@@ -165,6 +164,7 @@ export default {
 .zoomCv:hover {
   background-color: #C1272D;
   color: white;
+  cursor: pointer;
 }
 .zoomCv:active {
   outline-style:none;

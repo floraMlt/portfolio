@@ -10,11 +10,15 @@
 export default {
   name: 'GoHome',
   props: {
-    wait:{type:Boolean}
+    wait: { type:Boolean }
   },
   methods:{
     goHome(){
-      if(this.wait===false){
+      if (this.wait===false){
+        this.home()
+      } else if (this.$parent.$options.name === 'About' && window.innerWidth <= 680) {
+        this.home()
+      } else if (this.$parent.$options.name === 'Contact' && window.innerWidth <= 1100) {
         this.home()
       } else {
         setTimeout(this.home, 1600)
@@ -31,14 +35,10 @@ export default {
 .accueilPicto {
   color: white;
   width: 50%;
-  opacity: 0.8;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-.accueilPicto:hover {
-  opacity: 1;
 }
 .accueil {
   font-size: 1em;
@@ -53,7 +53,13 @@ export default {
   align-items: center;
   width: 100%;
   height: fit-content;
+  opacity: 0.8;
 }
+.goHome:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
 /* RESPONSIVE */
 @media (max-width: 1100px){
   .accueilPicto { width: 77%; }
