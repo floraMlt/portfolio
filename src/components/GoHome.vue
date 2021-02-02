@@ -1,3 +1,4 @@
+<!-- Picto Home for menu, redirects to the Home page -->
 <template>
   <div class="goHome" @click="goHome">
     <img class="accueilPicto" alt="Picto Home" src="@/assets/img/menu/homePicto.png">
@@ -13,6 +14,8 @@ export default {
     wait: { type:Boolean }
   },
   methods:{
+    /* Check if there is a line animation in this page, if yes, 
+      put a delay before moving the user to an other page, displaying the entire line animation */
     goHome(){
       if (this.wait===false){
         this.home()

@@ -1,8 +1,7 @@
+<!-- Page with details on a project, explanatory text, link to the project, images or illustrations -->
 <template>
   <div class="projectDetails">
     <router-link :to="{name: 'Projects'}" id="retour">
-      <!--<i class="arrow alternate circle left outline icon projects">
-      </i> <p class="txtRetour">Retour aux projets</p>-->
       <ButtonReturn id="buttonReturn"/>
     </router-link>
     <img id="deco1" alt="deco" src="@/assets/img/deco/lines5.png">
@@ -43,6 +42,7 @@ export default {
     this.verifProject()
   },
   methods : {
+    // 2 methods for the image carousel, used for hidding images and arrows in the carousel
     hideLeft() {
       this.first--
       this.last--
@@ -51,14 +51,17 @@ export default {
       this.first++
       this.last++
     },
+    // To open/close modal for zoom on images
     toggleModal(srcImg) {
       this.currentImgSrc = srcImg
       this.$refs.modal.toggle()
     },
+    // If there is no additional image on the project, doesn't display the carousel
     setClassImgs() {
       if (this.isThereMosaic) { this.currentImgClass = "contentPage" }
       else { this.currentImgClass = "noMosaic" }
     },
+    // Verify if the project put on the url is available, if it's not, push to the Home page
     verifProject(){
       if(projetsIndex[this.$route.params.titleP] == undefined) {
         this.$router.push({name:'Home'})
@@ -84,6 +87,7 @@ export default {
   },
   mounted() {
     this.$parent.onResize();
+    // Check additional images of the project, for the carousel
     if(this.currentProjectData.otherImg.length == 0) { this.isThereMosaic = false; }
     else { this.isThereMosaic = true; }
     this.setClassImgs();
@@ -92,7 +96,6 @@ export default {
 </script>
 
 <style scoped>
-
 h1{
   color: #C1272D;
   font-family: 'bodoniB';

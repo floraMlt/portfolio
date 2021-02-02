@@ -1,10 +1,11 @@
+<!-- Menu with Home, Contact and About icons, to go to these pages -->
 <template>
   <div class="menuVert">
     <img class="menuPicto" alt="Picto menu" src="@/assets/img/menu/menuPicto.png" @click="menuActive">
     <div id="otherIcons" :class="{'isOpen':isOpen}">
         <GoHome :wait="false" class="iconAll"/>
         <GoContact :wait="false" class="iconAll"/>
-        <GoAbout class="iconAll"/>
+        <GoAbout :wait="false" class="iconAll"/>
     </div>
     <div class="cache"> </div>
   </div>

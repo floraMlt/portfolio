@@ -1,3 +1,4 @@
+<!-- Background with all the images and svg for the Home page. Includes animated draw using anime.js -->
 <template>
   <div class="images">  
     <img id="lines" src="../assets/img/deco/lines.png" alt="illustration2">
@@ -35,6 +36,7 @@ import Anime from 'animejs/lib/anime.es.js';
 export default {
   name: 'BackgroundHome',
   methods: {
+    // Animation on the draw (in the hair)
     animeMe() {
       Anime({
         targets: '.blob',

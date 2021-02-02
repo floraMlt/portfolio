@@ -1,3 +1,4 @@
+<!-- Home page, with my presentation -->
 <template>
   <div class="home">
       <div id="blocTxt">
@@ -35,7 +36,7 @@ export default {
     Ball
   },
   methods : {
-    /* Start animation on the line when we arrive on the page*/
+    /* Start animation on the line when a user arrives on the page */
     lineEnter() {
       var animation = Anime({
         targets: '.animLine path',
@@ -48,7 +49,7 @@ export default {
       });
       animation.play()
     },
-    /* Start animation on the line leaving the screen when we go to an other page*/
+    /* Start animation on the line leaving the screen when a user goes to an other page */
     lineLeave() {
       var animation = Anime({
         targets: '.animLine path',

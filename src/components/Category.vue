@@ -1,3 +1,4 @@
+<!-- Component for one category in the category list -->
 <template>
   <div class="category">
     <img class="imgCat" :id="this.idImg" :src="this.srcImg" :alt="this.catName" v-on:click="go">

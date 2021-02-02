@@ -1,3 +1,4 @@
+<!-- Button to return to the list of projects, used in the page detailing a project -->
 <template>
   <div class="buttonReturn">
      <a class="btn btn1"><span></span>Retour</a>

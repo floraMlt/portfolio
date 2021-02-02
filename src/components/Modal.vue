@@ -1,3 +1,4 @@
+<!-- Modal with an image that can be zoom on. Used in the page detailing a project, for the images and illsutrations of the project. -->
 <template lang="html">
   <div>
     <sui-modal v-model="open">

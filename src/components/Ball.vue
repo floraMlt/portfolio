@@ -1,3 +1,4 @@
+<!-- Animated/interactive blue ball next to my name, in the Home page -->
 <template lang="html">
   <div class="ball">
     <svg width="20" height="100">

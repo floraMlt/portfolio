@@ -1,3 +1,4 @@
+<!-- Card giving a summary of one project, used in the list of projects.  -->
 <template>
   <div class="projectItem">
       <img id="img" :alt="this.projectData.img" :src="this.projectData.img">
@@ -15,17 +16,18 @@ import SeeButton from '@/components/SeeButton.vue'
 export default {
   name: 'ProjectItem',
   components: {
-      SeeButton
+    SeeButton
   },
   props:{
     projet:{type:Object, required:true}
   },
   data() {
-      return {
-          projectData: this.projet
-      }
+    return {
+      projectData: this.projet
+    }
   },
   methods:{
+    // To go to the page detailing a project
     see() {
       this.$currentViewProject = this.projectData
       this.$router.push('/projects/' + this.$parent.currentCategory +"/"+ this.projectData.routerTitle).catch(()=>{})

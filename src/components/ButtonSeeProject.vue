@@ -1,3 +1,4 @@
+<!-- Button in the page detailing a project, which redirects to the project online on viméo, github, etc. -->
 <template>
   <div class="buttonSeeProject">
     <a v-if="this.link" :href="this.link" target="_blank"> 
@@ -20,6 +21,7 @@ export default {
     }
   },
   mounted (){
+    // If no link to the project online, doesn't display the button
     if(this.link == "") { this.isThereLink = false; }
     else { this.isThereLink = true; }
   }

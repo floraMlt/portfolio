@@ -1,3 +1,4 @@
+<!-- Animated rose with anime.js, used in the Contact page -->
 <template>
   <div class="rose">
     <svg version="1.1" width="200" height="200" viewBox="0 0 320 320" fill="none" stroke="#fff" stroke-linecap="round"

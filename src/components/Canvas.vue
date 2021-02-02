@@ -1,3 +1,4 @@
+<!-- Canvas using WebGL, used in Contact and About pages, for the draw. -->
 <template>
   <div class="canvas">
   </div>

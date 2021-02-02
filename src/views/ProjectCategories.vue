@@ -1,3 +1,4 @@
+<!-- Page with all the project categories , user can choose one -->
 <template>
   <div class="projectCategories">
     <Menu class="menu"/>

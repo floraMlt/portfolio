@@ -1,3 +1,4 @@
+<!-- Picto About for menu, redirects to the About page -->
 <template>
   <div class="goAbout" @click="goAbout">
     <img class="aboutPicto" alt="Picto About" src="@/assets/img/menu/aboutPicto.png">
@@ -13,6 +14,8 @@ export default {
     wait:{type:Boolean}
   },
   methods:{
+    /* Check if there is a line animation in this page, if yes, 
+      put a delay before moving the user to an other page, displaying the entire line animation */
     goAbout(){
       if(this.wait===false){
         this.about()

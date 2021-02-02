@@ -1,3 +1,4 @@
+<!-- Menu with Home, Contact and About icons, to go to these pages -->
 <template>
   <div class="menu">
     <img class="menuPicto" alt="Picto menu" src="@/assets/img/menu/menuPicto.png" @click="menuActive">

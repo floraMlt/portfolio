@@ -6,46 +6,47 @@
 
 - [**Presentation**](#presentation)
   
-- [**Building configuration**](#Building-configuration)
-  * [**Clone repository**](#clone-repository)
-  * [**Frontend**](#frontend)
-    - [**Launch local frontend**](#launch-local-frontend)
-    - [**Build frontend**](#build-frontend)
+- [:computer: My portfolio](#computer-my-portfolio)
+  - [Table of Contents](#table-of-contents)
+  - [Presentation](#presentation)
+  - [Building configuration](#building-configuration)
+    - [Clone repository](#clone-repository)
+    - [Launch local project](#launch-local-project)
+    - [Build project](#build-project)
+  - [Dependencies](#dependencies)
 
 - [**Dependencies**](#dependencies)
 
 ## Presentation
-My portfolio 
+My portfolio shows differents projects carried out during my studies, or personal projects. They are sorted in several categories : web development, graphic design, animation, 3D, etc.
+I wanted to make a portfolio that suits to me and my personality, with a original design and some gentle animations.
 
 ## Building configuration
 You need [Node.js] (http://nodejs.org) to launch this project.
 ### Clone repository
 In a local folder for the project
 ```
-git clone  
+git clone https://github.com/floraMlt/portfolio.git
+```
 
-## Dependencies
-
-
-## Project setup
+### Launch local project
+In the Node Command Prompt, in the project folder
 ```
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Build project
+In the Node Command Prompt, in the project folder
 ```
+npm install
 npm run build
 ```
+The build folder is dist, in the project folder.
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Dependencies
+- [Semantic-ui] (https://www.npmjs.com/package/semantic-ui-vue). For styles.
+- [Vue-router](https://router.vuejs.org/). For router.
+- [Anime.js](https://animejs.com/). For js animations.
+- [Pixi.js](https://www.pixijs.com/). For interactive canvas.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

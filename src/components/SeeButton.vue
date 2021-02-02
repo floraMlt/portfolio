@@ -1,3 +1,4 @@
+<!-- See Button used in the list of projects, when a user wants to see in details one project. Used in the component Project Item. -->
 <template>
   <div class="button">
     <button v-on:click="callback" id="decoButton">Découvrir</button>

@@ -1,3 +1,4 @@
+<!-- Picto Contact for menu, redirects to the Contact page -->
 <template>
   <div class="goContact" @click="goContact">
     <img class="atPicto" alt="Picto Contact" src="@/assets/img/menu/contactPicto.png">
@@ -13,6 +14,8 @@ export default {
     wait:{type:Boolean}
   },
   methods:{
+    /* Check if there is a line animation in this page, if yes, 
+      put a delay before moving the user to an other page, displaying the entire line animation */
     goContact(){
       if(this.wait===false){
         this.contact()

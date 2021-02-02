@@ -12,6 +12,7 @@ export default class Webgl {
   lerp = (source, dest, k = 0.05) => source + (dest - source) * k
   distance = (x1, y1, x2, y2) => Math.sqrt(Math.pow(x1 - x2, 2), Math.pow(y1 - y2, 2))
 
+  // Methods thats creates a canvas
   createCanvas = options => {
     const {
       image = "meBlc.png",

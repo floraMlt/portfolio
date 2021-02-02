@@ -1,3 +1,4 @@
+<!-- Contact page -->
 <template>
   <div class="contact">
     <div class="icons"  @click="lineLeave">
@@ -41,6 +42,7 @@ export default {
     Canvas
   },
   methods: {
+    /* Start animation on the line when a user arrives on the page */
     lineEnter() {
       var animation = Anime({
         targets: '.animLine path',
@@ -53,6 +55,7 @@ export default {
       });
       animation.play()
     },
+    /* Start animation on the line leaving the screen when a user goes to an other page */
     lineLeave() {
       var animation = Anime({
         targets: '.animLine path',

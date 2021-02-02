@@ -1,3 +1,4 @@
+<!-- List of projects sorted by category -->
 <template>
   <div class="projects">
     <MenuVert/>
@@ -36,22 +37,31 @@ export default {
     ProjectItem
   },
   mounted() {
+    // Get the current category (category selected on the previous page)
     this.getCategory()
     this.catSelected = this.currentCategory
     this.$parent.onResize()
   },
-  computed: { // relance fonction que quand il y a une action de l'utilisateur
+  computed: {
+    // Return projects corresponding to the current category
     selectProject : function() {
       return this.projects.filter(this.verifCategory)
     }
   },
   methods : {
+    /* 
+    Change url of the page with the name of the selected category, without reload the page.
+    Change current category with the selected category 
+    */
     changeCategory(categorie) {
       this.$refs.scrollContener.scrollTop = 0
-      this.$router.replace('/projects/' + categorie)
+      if(this.currentCategory !== categorie) {
+        this.$router.replace('/projects/' + categorie)
+      }
       this.getCategory()
       this.catSelected = this.currentCategory
     },
+    // Get the selected category thanks to the url, if the category is not defined, push to the Home page
     getCategory(){
       if(this.$route.params.catName == 'Illustration'
         || this.$route.params.catName == 'Graphisme'
@@ -68,6 +78,7 @@ export default {
         this.$router.push({name:'Home'})
       }
     },
+    // Method verifying the categories of one project, return true or false.
     verifCategory:
       function (projet) {
         return this.currentCategory == "All" || projet.categories.includes(this.currentCategory)

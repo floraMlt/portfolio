@@ -1,3 +1,4 @@
+<!-- Modal with my cv, udes in the About page -->
 <template lang="html">
   <div id="modalcv">
     <sui-modal v-model="open">

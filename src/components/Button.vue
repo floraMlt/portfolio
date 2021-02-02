@@ -1,3 +1,4 @@
+<!-- Button used in the home page to access to the list of categories -->
 <template>
   <div class="button">
     <button v-on:click="go" id="decoButton">C'est parti !</button>
@@ -9,11 +10,13 @@
 export default {
   name: 'Button',
   props: {
-    wait:{type:Boolean}
+    wait: { type:Boolean }
   },
   methods:{
+    /* Check if there is a line animation in this page, if yes, 
+      put a delay before moving the user to an other page, displaying the entire line animation */
     go() {
-      if(this.wait===false){
+      if(this.wait === false){
         this.projects()
       } else if (window.innerWidth <= 980) {
         this.projects()

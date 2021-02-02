@@ -1,4 +1,4 @@
-// Index for projects
+// Index associated with projects
 const projectsIndex =
 {
     CapSciences: 0,
