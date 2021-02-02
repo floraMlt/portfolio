@@ -3,11 +3,6 @@
 ![flora-mallet](doc/site.png?raw=true "Flora-mallet")
 
 ## Table of Contents
-
-- [**Presentation**](#presentation)
-  
-- [:computer: My portfolio](#computer-my-portfolio)
-  - [Table of Contents](#table-of-contents)
   - [Presentation](#presentation)
   - [Building configuration](#building-configuration)
     - [Clone repository](#clone-repository)
@@ -15,11 +10,9 @@
     - [Build project](#build-project)
   - [Dependencies](#dependencies)
 
-- [**Dependencies**](#dependencies)
-
 ## Presentation
 My portfolio shows differents projects carried out during my studies, or personal projects. They are sorted in several categories : web development, graphic design, animation, 3D, etc.
-I wanted to make a portfolio that suits to me and my personality, with a original design and some gentle animations.
+I wanted to make a portfolio that suits to me and my personality, with a original design and some gentle animations. You can access my site here : [flora-mallet](http://flora-mallet.com/).
 
 ## Building configuration
 You need [Node.js] (http://nodejs.org) to launch this project.
