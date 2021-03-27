@@ -8,7 +8,7 @@
     <div class="content">
       <h2 class="title">A propos de moi</h2>
       <p class="txt">Etudiante en dernière année à l'école d'ingénieur IMAC, spécialisée dans le domaine du <span class="bold">multimédia</span>, 
-        je suis aujourd'hui à la recherche<span class="bold"> d'un stage de 6 mois </span> en tant que développeuse web (front, back ou fullstack). 
+        je suis aujourd'hui stagiaire <span class="bold"> Développeuse front-end </span> chez Intranet Inside (Maecia) ! 
         Grâce à mes formations j'ai autant appris à programmer (web, C++, java) qu'à concevoir 
         des <span class="bold">contenus riches et créatifs </span> des supports variés (print, web, installation interactive, etc.).
         La <span class="bold">polyvalence</span> est quelque chose de très important pour moi, elle me permet de créer des travaux originaux 

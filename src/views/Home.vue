@@ -9,7 +9,7 @@
         <div id="txtButton">
             <p id="txt">
                 Bonjour ! Je m'appelle Flora et je suis actuellement en dernière année à l'école d'ingénieur IMAC (Image Multimédia Audiovisuel Communication) afin de devenir <span class="bold">Ingénieure Créative !</span> Je suis passionnée par  
-                le multimédia et tout particulièrement par le web, qui me permet de mêler programmation et créativité. <span class="bold">Je cherche un stage de 6 mois en tant que développeuse web (front, back, fullstack) à partir d'avril 2021. </span><br> <br>Prêt.e.s à découvrir mon univers ?
+                le multimédia et tout particulièrement par le web, qui me permet de mêler programmation et créativité. <span class="bold">Je suis actuellement stagiaire Développeuse front-end chez Intranet Inside (Maecia) ! </span><br> <br>Prêt.e.s à découvrir mon univers ?
             </p>
             <div @click="lineLeave">
               <Button id="buttonGo" :wait="true"/></div>
